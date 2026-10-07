@@ -172,8 +172,8 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 .plan > p { color: var(--fg-dim); }
 .plan .ticks { margin-top: 4px; }
 
-/* pricing */
-.pricing { border-top: 1px solid var(--line); }
+/* field and office, pricing */
+.field-office, .pricing { border-top: 1px solid var(--line); }
 .plan .price { display: flex; align-items: baseline; gap: 4px; }
 .plan .price b { font: 800 clamp(40px, 4.4vw, 54px)/1 var(--display); letter-spacing: -0.03em; color: var(--fg); }
 .plan .price span { color: var(--fg-dim); font-size: 18px; margin-left: 4px; }
