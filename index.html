@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rough-In Redlines</title>
+<title>Rough-In Redlines — PDF Markup for the Trades</title>
 <meta name="description" content="Rough-In Redlines is an iPad and iPhone app for the trades: redline your prints with Apple Pencil, place trade symbols, count devices, compare revisions, build panel schedules and send the office a PDF they can open in Bluebeam.">
-<meta name="theme-color" content="#C8231B">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="img/touch-icon.png">
+<meta name="theme-color" content="#0B0E13">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/touch-icon.png">
 <link rel="canonical" href="https://roughinredlines.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Rough-In Redlines — PDF Markup for the Trades">
@@ -17,153 +17,164 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="sheet">
-  <header class="top inner">
-    <a class="brand" href="./" aria-label="Rough-In Redlines home">
-      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 6a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8z" fill="none" stroke="var(--red)" stroke-width="3" stroke-linejoin="round"/><path d="M13 31 L29 15" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="M29 15 L32 12" stroke="var(--red)" stroke-width="4" stroke-linecap="round"/></svg>
-      <span class="wordmark"><b>Rough-In</b><small>REDLINES</small></span>
-    </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#features">Features</a>
-      <a href="#compare">Compare</a>
-      <a href="#send">Send</a>
-      <a href="support.html">Support</a>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rough-In Redlines home"><img src="/img/logo.svg" width="34" height="34" alt=""><span><b>Rough-In</b> <small>REDLINES</small></span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="hide-sm" href="/#features">Features</a>
+      <a class="hide-sm" href="/#how">How it works</a>
+      <a href="/support.html">Support</a>
+      <a class="pill" href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">Early access</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main>
-    <div class="hero inner">
-      <div>
-        <p class="eyebrow">PDF markup for the trades · iPad &amp; iPhone</p>
-        <h1>Mark up the <span class="redline">prints</span>, not a notepad.</h1>
-        <p class="lede">Redline your drawings on the iPad, right on the job, and send them back to the office the way the office wants them.</p>
-        <div class="cta">
-          <span class="btn primary">Coming to the App Store</span>
-          <a class="btn" href="#features">See what it does</a>
-        </div>
-        <p class="note" style="margin-top:16px">Questions? <a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a></p>
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker mono"><i></i>Coming soon · iPad &amp; iPhone</p>
+      <h1>Mark up the <span class="mark">prints<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 60 6, 140 4, 296 14" fill="none" stroke="#E0352B" stroke-width="7" stroke-linecap="round"/></svg></span>, not a&nbsp;notepad.</h1>
+      <p class="lede">Rough-In Redlines puts your drawings, trade symbols and panel schedules on the iPad, then sends the office exactly what it needs, even a PDF they can keep editing in Bluebeam.</p>
+      <div class="ctas">
+        <span class="btn btn-red" role="note"><svg class="apple" viewBox="0 0 17 20" aria-hidden="true"><path fill="currentColor" d="M14.2 10.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.6-1.9-1.5-.2-3 .9-3.7.9-.8 0-2-.9-3.3-.9C4 5 2.4 6 1.5 7.6c-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8s2 .8 3.3.8c1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.8-1.1-2.9-4.4zM11.8 3.4c.7-.8 1.2-2 1-3.1-1 0-2.2.7-2.9 1.5-.6.7-1.2 1.9-1 3 1.1.1 2.2-.6 2.9-1.4z"/></svg>Coming soon to the App Store</span>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
-      <figure class="shot">
-        <img src="img/editor.jpg" width="1800" height="1315" alt="Rough-In Redlines on iPad: a floor plan with red revision clouds, duplex receptacle symbols, a measured run, a text callout and an AS-BUILT stamp.">
-        <span class="cloud-tag" aria-hidden="true">ADD (3) DUPLEX PER RFI 14</span>
-        <figcaption>Sheet E1.01 · Lighting &amp; Power Plan · scale 1/4" = 1'-0"</figcaption>
-      </figure>
+      <p class="fine">Want it early for your crew? <a href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">support@roughinredlines.com</a></p>
+    </div>
+    <div class="device">
+      <div class="ipad"><img src="/img/editor.jpg" width="1800" height="1315" alt="Rough-In Redlines on iPad: floor plan E1.01 with red revision clouds, duplex receptacle symbols, a measured run, a text callout and an AS-BUILT stamp." fetchpriority="high"></div>
+      <div class="callout"><b>Sheet E1.01 · Lighting &amp; Power</b><span class="mono">Scale 1/4" = 1'-0" · 16 symbols</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="features">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <p class="mono">Built for the jobsite</p>
+      <h2>Everything you do to a print, minus the paper.</h2>
+      <p>Made for foremen working with an Apple Pencil, a finger, or gloves on, in basements and trailers with no signal.</p>
+    </div>
+    <div class="rows">
+      <div class="row rise">
+        <div class="media"><div class="ipad"><img src="/img/editor.jpg" width="1800" height="1315" alt="Markups on a floor plan: clouds, symbols, text and a stamp." loading="lazy"></div></div>
+        <div class="text">
+          <p class="mono">01 · Markup</p>
+          <h3>Redline fast, with real trade symbols.</h3>
+          <p>Pen, highlighter, clouds, arrows and text, plus 200+ symbols across 8 trade libraries. Size a symbol once, then Copy &amp; Place it across the sheet.</p>
+          <ul class="ticks"><li>Saved pens for one-tap colour and width</li><li>Highlighter with adjustable opacity</li><li>Stamps with your initials and date</li></ul>
+        </div>
+      </div>
+      <div class="row flip rise" id="compare">
+        <div class="media"><div class="ipad"><img src="/img/compare.jpg" width="1800" height="1315" alt="Compare view: a removed wall in red and a new electrical room in blue." loading="lazy"></div></div>
+        <div class="text">
+          <p class="mono">02 · Compare</p>
+          <h3>New revision? See what changed.</h3>
+          <p>Pick the old print and Rough-In lines up every sheet by its number. Removed work shows red, new work blue.</p>
+          <ul class="ticks"><li>Overlay, side by side, or blink</li><li>A list of every change, including text like "20A → 30A"</li><li>Cloud every change, then bring your old markups over</li></ul>
+        </div>
+      </div>
+      <div class="row rise">
+        <div class="media"><div class="ipad"><img src="/img/panel.jpg" width="1800" height="1315" alt="Panel schedule LP-1 with a three-pole RTU breaker spanning circuits 9, 11 and 13." loading="lazy"></div></div>
+        <div class="text">
+          <p class="mono">03 · Panel schedules</p>
+          <h3>Directory cards without Excel on the iPad.</h3>
+          <p>Odd circuits left, even right, just like the card on the panel door. Type or tap descriptions, combine 2- and 3-pole breakers, mark spares.</p>
+          <ul class="ticks"><li>Excel and PDF cards with your company name and logo</li><li>Open an existing schedule and keep going</li><li>Room numbers straight off the drawing</li></ul>
+        </div>
+      </div>
+      <div class="row flip rise" id="send">
+        <div class="media"><div class="ipad"><img src="/img/send-menu.jpg" width="1800" height="1315" alt="The Send menu with PDF for Bluebeam or Acrobat, Flattened PDF, Redline Copy and Counts CSV." loading="lazy"></div></div>
+        <div class="text">
+          <p class="mono">04 · Send</p>
+          <h3>Send it back the way the office wants it.</h3>
+          <p>One menu, whatever the office uses. Send only the marked-up pages of a big set.</p>
+          <div class="outputs">
+            <div><b>PDF for Bluebeam</b><span>Markups stay editable in Bluebeam or Acrobat, with your initials.</span></div>
+            <div><b>Flattened PDF</b><span>Markups burned in, with photo and count pages.</span></div>
+            <div><b>Redline copy</b><span>Another iPad opens it fully editable.</span></div>
+            <div><b>Counts (CSV)</b><span>Symbol counts and runs for the estimator.</span></div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <section id="features" class="inner">
-      <div class="sec-head">
-        <div class="bubble" aria-hidden="true"><span>1</span><span>RI-1</span></div>
-        <div><h2>Everything you mark on a print</h2><p class="sec-sub">Built for foremen with a Pencil, a finger, or gloves on.</p></div>
+    <div class="bento">
+      <div class="tile wide ink rise">
+        <span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h7"/><circle cx="18" cy="16" r="3"/></svg></span>
+        <div class="big">200+</div>
+        <h3>Trade symbols, 8 libraries</h3>
+        <div class="libs"><span>Electrical</span><span>Fire Alarm</span><span>Low Voltage</span><span>Security</span><span>Plumbing</span><span>HVAC / Mechanical</span><span>Fire Sprinkler</span><span>General</span></div>
       </div>
-      <div class="grid">
-        <div class="cell"><span class="tag">PEN · HIGHLIGHT · TEXT</span><h3>Redline fast</h3><p>Apple Pencil or finger. Saved pens for one-tap colour and width, a highlighter with adjustable opacity, and text in any size.</p></div>
-        <div class="cell"><span class="tag">200+ SYMBOLS</span><h3>Trade symbols</h3><p>Receptacles, switches, fixtures, fire alarm, low voltage, security, plumbing, HVAC and sprinkler symbols. Size it once, then Copy &amp; Place.</p></div>
-        <div class="cell"><span class="tag">TALLY</span><h3>Count tool</h3><p>Tap each device on the print. Running totals by sheet and for the whole set, on the PDF and in a spreadsheet.</p></div>
-        <div class="cell"><span class="tag">1/4" = 1'-0"</span><h3>Measure to scale</h3><p>Set the drawing scale or calibrate off a known dimension, then measure distances and conduit runs in feet and inches.</p></div>
-        <div class="cell"><span class="tag">COVER</span><h3>White-out</h3><p>Cover an old wall, door or note on the drawing, then draw what's really there on top.</p></div>
-        <div class="cell"><span class="tag">FIELD PHOTOS</span><h3>Photos on the sheet</h3><p>Drop a numbered photo pin where you took it. Photos go out with the PDF.</p></div>
-      </div>
-      <div class="libs" aria-label="Symbol libraries">
-        <span>Electrical</span><span>Fire Alarm</span><span>Low Voltage</span><span>Security</span><span>Plumbing</span><span>HVAC / Mechanical</span><span>Fire Sprinkler</span><span>General</span>
-      </div>
-    </section>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l4 4 10-10"/></svg></span><h3>Count tool</h3><p>Tap each device. Totals by sheet and for the set, on the PDF and in a spreadsheet.</p></div>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17L17 3l4 4L7 21H3v-4z"/><path d="M14 6l4 4"/></svg></span><h3>Measure to scale</h3><p>Set 1/4" = 1'-0" or calibrate off a known dimension, then measure runs in feet and inches.</p></div>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 12h8"/></svg></span><h3>White-out</h3><p>Cover an old wall, door or note, then draw what's really there.</p></div>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg></span><h3>Photos on the sheet</h3><p>Numbered photo pins where you took them, out with the PDF.</p></div>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a5 5 0 1 1 1-9.9A6 6 0 0 1 19 10a4 4 0 0 1-1 8H7z"/><path d="M12 11v6M9.5 13.5L12 11l2.5 2.5"/></svg></span><h3>Backup</h3><p>Copies to your own iCloud Drive or Dropbox folder, still editable.</p></div>
+      <div class="tile rise"><span class="icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.5a15 15 0 0 1 20 0M5 12a10 10 0 0 1 14 0M8.5 15.5a5 5 0 0 1 7 0"/><path d="M3 3l18 18"/></svg></span><h3>Works offline</h3><p>No account, no server, no signal needed. Drawings stay on your iPad.</p></div>
+    </div>
+  </div>
+</section>
 
-    <section id="compare" class="inner">
-      <div class="sec-head">
-        <div class="bubble" aria-hidden="true"><span>2</span><span>RI-1</span></div>
-        <div><h2>New revision? Compare the prints</h2><p class="sec-sub">See what the designers changed before you build it.</p></div>
-      </div>
-      <div class="split">
-        <div>
-          <p>Open the new set, pick the old one, and Rough-In lines up every sheet by its number. Removed work shows red, new work blue.</p>
-          <ul class="ticks">
-            <li>Overlay, side by side, or blink between old and new</li>
-            <li>A list of every change, and text changes like "20A → 30A"</li>
-            <li>One tap clouds every change on the new sheet</li>
-            <li>Bring your markups from the old print onto the new one</li>
-          </ul>
-        </div>
-        <figure class="shot">
-          <img src="img/compare.jpg" width="1800" height="1315" alt="Compare view: the old print's removed wall in red and a new electrical room in blue, with Overlay, Side by Side and Blink buttons." loading="lazy">
-          <figcaption>Overlay · removed in red, added in blue</figcaption>
-        </figure>
-      </div>
-    </section>
+<section id="how" class="steps-band">
+  <div class="wrap">
+    <div class="sec-head rise">
+      <p class="mono">How it works</p>
+      <h2>Three steps, no laptop.</h2>
+    </div>
+    <ol class="steps">
+      <li class="rise"><h3>Open the print</h3><p>From Files, or share the PDF straight out of Mail. Photos and pictures open too.</p></li>
+      <li class="rise"><h3>Mark it up</h3><p>Redline, place symbols, count, measure, and add photos right where the work is.</p></li>
+      <li class="rise"><h3>Send it back</h3><p>A Bluebeam-ready PDF, a flattened copy, counts for the estimator or panel cards for the PM.</p></li>
+    </ol>
+  </div>
+</section>
 
-    <section id="panels" class="inner">
-      <div class="sec-head">
-        <div class="bubble" aria-hidden="true"><span>3</span><span>RI-1</span></div>
-        <div><h2>Panel schedules without Excel on the iPad</h2><p class="sec-sub">Odd circuits left, even right, just like the card on the panel door.</p></div>
-      </div>
-      <div class="split rev">
-        <figure class="shot">
-          <img src="img/panel.jpg" width="1800" height="1315" alt="A panel schedule for panel LP-1 with circuit descriptions and a three-pole RTU breaker spanning circuits 9, 11 and 13." loading="lazy">
-          <figcaption>Panel LP-1 · 3-pole breaker on 9-11-13</figcaption>
-        </figure>
-        <div>
-          <p>Type or tap a description, combine circuits into 2- and 3-pole breakers, mark spares. Room numbers come straight off the drawing.</p>
-          <ul class="ticks">
-            <li>Excel and PDF directory cards with your company name and logo</li>
-            <li>Open an existing schedule from Excel and keep going</li>
-            <li>Works offline, undo everything</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+<section>
+  <div class="wrap">
+    <div class="sec-head rise">
+      <p class="mono">Who it's for</p>
+      <h2>Made by a contractor, for the trades.</h2>
+      <p>Foremen and crews who live on the prints, and the PMs who need the changes back.</p>
+    </div>
+    <div class="trades rise"><span>Electricians</span><span>Plumbers</span><span>HVAC</span><span>Fire alarm</span><span>Low voltage</span></div>
 
-    <section id="send" class="inner">
-      <div class="sec-head">
-        <div class="bubble" aria-hidden="true"><span>4</span><span>RI-1</span></div>
-        <div><h2>Send it back the way they want it</h2><p class="sec-sub">One menu, whatever the office uses.</p></div>
+    <div class="plans">
+      <div class="plan rise">
+        <div class="name"><h3>Free</h3><span class="mono">To start</span></div>
+        <p>Open your prints and mark them up. Send a flattened PDF.</p>
       </div>
-      <div class="split">
-        <div class="outputs">
-          <div class="out"><b>PDF for Bluebeam</b><span>Every markup stays editable in Bluebeam or Acrobat, with your initials on it.</span></div>
-          <div class="out"><b>Flattened PDF</b><span>Markups burned in, plus photo pages and a count page.</span></div>
-          <div class="out"><b>Redline copy</b><span>Another iPad opens it with every markup still editable.</span></div>
-          <div class="out"><b>Counts (CSV)</b><span>Symbol counts and measured runs for the estimator's spreadsheet.</span></div>
-        </div>
-        <figure class="shot">
-          <img src="img/send-menu.jpg" width="1800" height="1315" alt="The Send menu: PDF for Bluebeam or Acrobat, Flattened PDF, Redline Copy, Counts CSV, Save to Files and Flatten." loading="lazy">
-          <figcaption>Marked-up pages only for big sets</figcaption>
-        </figure>
+      <div class="plan pro rise">
+        <div class="name"><h3>Pro</h3><span class="mono">The full toolkit</span></div>
+        <p>Compare, counts, panel schedules, Bluebeam-ready PDFs and backup. Pricing announced at launch.</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="inner">
-      <div class="sec-head">
-        <div class="bubble" aria-hidden="true"><span>5</span><span>RI-1</span></div>
-        <div><h2>Your drawings stay on your iPad</h2><p class="sec-sub">No account. No server. No signal needed.</p></div>
+<div class="final">
+  <svg class="cloud" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 6a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8z" fill="none" stroke="#E0352B" stroke-width="1.2" stroke-linejoin="round"/></svg>
+  <section>
+    <div class="wrap">
+      <div>
+        <h2>Put the prints in your pocket.</h2>
+        <p>Rough-In Redlines is coming to the App Store. Want to try it early on your crew? Send us a note.</p>
       </div>
-      <ul class="ticks" style="max-width:60ch">
-        <li>Works fully offline in basements, mechanical rooms and job trailers</li>
-        <li>Automatic backup to a folder you choose in iCloud Drive or Dropbox, with markups still editable</li>
-        <li>No ads, no tracking, nothing uploaded unless you send it</li>
-      </ul>
-    </section>
-
-    <section class="inner">
-      <div class="coming">
-        <div>
-          <h2>Coming soon to the App Store</h2>
-          <p>Free to start, with Pro for the full toolkit. Pricing will be announced at launch.</p>
-        </div>
-        <a class="btn primary" href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines">Get in touch</a>
-      </div>
-      <p class="note" style="margin-top:12px">Email <a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a> to try it early on your crew.</p>
-    </section>
-  </main>
-
-  <footer class="titleblock">
-    <div><span class="k">Project</span><span class="v">Rough-In Redlines · PDF Markup for the Trades</span></div>
-    <div><span class="k">Drawn by</span><span class="v">RK Technology LLC</span></div>
-    <div><span class="k">Details</span><span class="v"><a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span></div>
-    <div><span class="k">Sheet</span><span class="sheetno">RI-1</span><span class="k">© 2026</span></div>
-  </footer>
+      <a class="btn btn-red" href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">Get early access</a>
+    </div>
+  </section>
 </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 RK Technology LLC · North Dakota</span>
+    <nav aria-label="Footer"><a href="/privacy.html">Privacy</a><a href="/support.html">Support</a><a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a></nav>
+  </div>
+</footer>
 </body>
 </html>
