@@ -172,6 +172,18 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 .plan > p { color: var(--fg-dim); }
 .plan .ticks { margin-top: 4px; }
 
+/* pricing */
+.pricing { border-top: 1px solid var(--line); }
+.plans.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.plan .price { display: flex; align-items: baseline; gap: 4px; }
+.plan .price b { font: 800 clamp(40px, 4.4vw, 54px)/1 var(--display); letter-spacing: -0.03em; color: var(--fg); }
+.plan .price span { color: var(--fg-dim); font-size: 18px; }
+.plan .per strong, .plan > p strong { color: var(--fg); }
+.plan.pro .per strong { color: var(--red-ink); }
+.fine-print { color: var(--fg-dim); font-size: 14px; max-width: 60em; margin-top: 22px; }
+.final-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.appstore-placeholder { cursor: default; }
+
 /* final CTA */
 .final { background: var(--ink); color: var(--on-ink); position: relative; overflow: hidden; }
 .final .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: end; }
@@ -215,6 +227,7 @@ footer a:hover { color: var(--on-ink); }
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .plans.three { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: minmax(0, 1fr); }
@@ -232,7 +245,7 @@ footer a:hover { color: var(--on-ink); }
   .outputs { grid-template-columns: minmax(0, 1fr); }
   .hero .callout { position: static; margin-top: 18px; align-self: flex-start; }
   .hero .device { display: flex; flex-direction: column; }
-  .hero .ctas .btn { width: 100%; justify-content: center; }
+  .hero .ctas .btn, .final-ctas .btn { width: 100%; justify-content: center; }
 }
 
 /* RR logo in the hero */
