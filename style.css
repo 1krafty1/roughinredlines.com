@@ -174,10 +174,9 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 
 /* pricing */
 .pricing { border-top: 1px solid var(--line); }
-.plans.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .plan .price { display: flex; align-items: baseline; gap: 4px; }
 .plan .price b { font: 800 clamp(40px, 4.4vw, 54px)/1 var(--display); letter-spacing: -0.03em; color: var(--fg); }
-.plan .price span { color: var(--fg-dim); font-size: 18px; }
+.plan .price span { color: var(--fg-dim); font-size: 18px; margin-left: 4px; }
 .plan .per strong, .plan > p strong { color: var(--fg); }
 .plan.pro .per strong { color: var(--red-ink); }
 .fine-print { color: var(--fg-dim); font-size: 14px; max-width: 60em; margin-top: 22px; }
@@ -227,7 +226,6 @@ footer a:hover { color: var(--on-ink); }
 /* ---------- responsive ---------- */
 @media (max-width: 1024px) {
   .bento { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .plans.three { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 900px) {
   .hero .wrap { grid-template-columns: minmax(0, 1fr); }
