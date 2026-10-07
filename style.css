@@ -234,3 +234,6 @@ footer a:hover { color: var(--on-ink); }
   .hero .device { display: flex; flex-direction: column; }
   .hero .ctas .btn { width: 100%; justify-content: center; }
 }
+
+/* RR logo in the hero */
+.hero-logo { display: block; width: clamp(92px, 9vw, 132px); height: auto; margin: 0 0 6px -10px; }

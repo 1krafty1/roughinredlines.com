@@ -3,7 +3,7 @@
 <defs><filter id="rough" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.045" numOctaves="2" seed="4"/><feDisplacementMap in="SourceGraphic" scale="2.6"/></filter></defs>
 
 <g filter="url(#rough)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-<g stroke="#C8302A" opacity="0.88" stroke-width="8">
+<g stroke="#EF4A3E" opacity="0.92" stroke-width="8">
 <path d="M60 24 C59 70 61 120 60 172"/><path d="M46 46 L60 12 L74 48"/>
 <path d="M94 33 C112 33 126 46 125 64 C124 83 111 95 94 95 C76 96 63 82 63 64 C63 46 76 33 96 34"/>
 <path d="M86 20 L87 108 M102 20 L101 108" stroke-width="6"/>
@@ -14,6 +14,6 @@
 <path d="M150 36 L177 35 C199 35 213 48 213 66 C213 84 199 96 177 96 L150 97"/>
 <path d="M174 97 L210 172"/>
 </g>
-<g stroke="#C8302A" opacity="0.32" stroke-width="3" transform="translate(1.8 1.2)"><path d="M60 24 C59 70 61 120 60 172"/><path d="M94 33 C112 33 126 46 125 64 C124 83 111 95 94 95 C76 96 63 82 63 64 C63 46 76 33 96 34"/><path d="M90 96 L121 172"/></g><g stroke="#E3E7EB" opacity="0.28" stroke-width="3" transform="translate(-1.5 1.4)"><path d="M150 34 C149 80 151 122 150 172"/><path d="M150 36 L177 35 C199 35 213 48 213 66 C213 84 199 96 177 96 L150 97"/></g>
+<g stroke="#EF4A3E" opacity="0.32" stroke-width="3" transform="translate(1.8 1.2)"><path d="M60 24 C59 70 61 120 60 172"/><path d="M94 33 C112 33 126 46 125 64 C124 83 111 95 94 95 C76 96 63 82 63 64 C63 46 76 33 96 34"/><path d="M90 96 L121 172"/></g><g stroke="#E3E7EB" opacity="0.28" stroke-width="3" transform="translate(-1.5 1.4)"><path d="M150 34 C149 80 151 122 150 172"/><path d="M150 36 L177 35 C199 35 213 48 213 66 C213 84 199 96 177 96 L150 97"/></g>
 </g>
 </svg>
