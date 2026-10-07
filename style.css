@@ -173,7 +173,7 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 .plan .ticks { margin-top: 4px; }
 
 /* field and office, pricing */
-.field-office, .pricing { border-top: 1px solid var(--line); }
+.field-office, .pricing, .windows { border-top: 1px solid var(--line); }
 .plan .price { display: flex; align-items: baseline; gap: 4px; }
 .plan .price b { font: 800 clamp(40px, 4.4vw, 54px)/1 var(--display); letter-spacing: -0.03em; color: var(--fg); }
 .plan .price span { color: var(--fg-dim); font-size: 18px; margin-left: 4px; }
@@ -248,3 +248,14 @@ footer a:hover { color: var(--on-ink); }
 
 /* RR logo in the hero */
 .hero-logo { display: block; width: clamp(92px, 9vw, 132px); height: auto; margin: 0 0 6px -10px; }
+
+/* Windows section: buttons on light surfaces, "coming soon" state */
+.btn-line { color: var(--fg); border-color: var(--line); background: var(--surface); }
+.btn-line:hover { border-color: var(--fg-dim); }
+.plan .btn { align-self: flex-start; margin-top: auto; }
+.btn.soon { cursor: default; flex-wrap: wrap; row-gap: 4px; padding-block: 10px; }
+.btn.soon small { font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+.windows .plans + .plans { margin-top: 14px; }
+.mono-inline { font-family: var(--mono); font-size: 0.9em; }
+.pricing .fine-print a { color: var(--red-ink); }
+@media (max-width: 640px) { .plan .btn { width: 100%; justify-content: center; } }
