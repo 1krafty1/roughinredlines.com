@@ -254,6 +254,8 @@ footer a:hover { color: var(--on-ink); }
 .btn-line:hover { border-color: var(--fg-dim); }
 .plan .btn { align-self: flex-start; margin-top: auto; }
 .btn.soon { cursor: default; flex-wrap: wrap; row-gap: 4px; padding-block: 10px; }
+.get-windows { display: flex; flex-wrap: wrap; gap: 10px; }
+.get-windows .btn { flex: 1 1 200px; justify-content: center; }
 .btn.soon small { font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
 .windows .plans + .plans { margin-top: 14px; }
 .mono-inline { font-family: var(--mono); font-size: 0.9em; }
