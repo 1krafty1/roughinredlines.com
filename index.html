@@ -51,7 +51,15 @@
         <span class="btn btn-red appstore-placeholder" role="note" data-app-store-id="6819901021" title="One App Store download for iPad, iPhone and Mac">Coming soon to the App Store</span>
         <a class="btn btn-ghost" href="#how">See how it works</a>
       </div>
-      <p class="fine">Want it early for your crew? <a href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">support@roughinredlines.com</a></p>
+      <form class="notify" action="https://buttondown.com/api/emails/embed-subscribe/randykraft" method="post" target="_blank" aria-label="Get notified at launch">
+        <label for="notify-email">Get notified at launch</label>
+        <div class="notify-row">
+          <input id="notify-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          <input type="hidden" name="tag" value="launch">
+          <button class="btn btn-red" type="submit">Notify me</button>
+        </div>
+        <p class="fine">One email when it launches. No spam. Want it early for your crew? <a href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">support@roughinredlines.com</a></p>
+      </form>
     </div>
     <div class="device">
       <div class="ipad"><img src="/img/editor.jpg" width="1800" height="1315" alt="Rough-In Redlines on iPad: floor plan E1.01 with red revision clouds, duplex receptacle symbols, a measured run, a text callout and an AS-BUILT stamp." fetchpriority="high"></div>
