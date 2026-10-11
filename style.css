@@ -172,6 +172,17 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 .plan > p { color: var(--fg-dim); }
 .plan .ticks { margin-top: 4px; }
 
+/* field and office, pricing */
+.field-office, .pricing, .windows { border-top: 1px solid var(--line); }
+.plan .price { display: flex; align-items: baseline; gap: 4px; }
+.plan .price b { font: 800 clamp(40px, 4.4vw, 54px)/1 var(--display); letter-spacing: -0.03em; color: var(--fg); }
+.plan .price span { color: var(--fg-dim); font-size: 18px; margin-left: 4px; }
+.plan .per strong, .plan > p strong { color: var(--fg); }
+.plan.pro .per strong { color: var(--red-ink); }
+.fine-print { color: var(--fg-dim); font-size: 14px; max-width: 60em; margin-top: 22px; }
+.final-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.appstore-placeholder { cursor: default; }
+
 /* final CTA */
 .final { background: var(--ink); color: var(--on-ink); position: relative; overflow: hidden; }
 .final .wrap { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: end; }
@@ -182,7 +193,7 @@ section { padding-block: clamp(72px, 10vw, 136px); }
 /* footer */
 footer { background: var(--ink); color: var(--on-ink-dim); border-top: 1px solid var(--ink-line); font-size: 14.5px; }
 footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 28px; }
-footer nav { display: flex; gap: 22px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 footer a { color: var(--on-ink-dim); text-decoration: none; }
 footer a:hover { color: var(--on-ink); }
 
@@ -232,8 +243,46 @@ footer a:hover { color: var(--on-ink); }
   .outputs { grid-template-columns: minmax(0, 1fr); }
   .hero .callout { position: static; margin-top: 18px; align-self: flex-start; }
   .hero .device { display: flex; flex-direction: column; }
-  .hero .ctas .btn { width: 100%; justify-content: center; }
+  .hero .ctas .btn, .final-ctas .btn { width: 100%; justify-content: center; }
 }
 
 /* RR logo in the hero */
 .hero-logo { display: block; width: clamp(92px, 9vw, 132px); height: auto; margin: 0 0 6px -10px; }
+
+/* Windows section: buttons on light surfaces, "coming soon" state */
+.btn-line { color: var(--fg); border-color: var(--line); background: var(--surface); }
+.btn-line:hover { border-color: var(--fg-dim); }
+.plan .btn { align-self: flex-start; margin-top: auto; }
+.btn.soon { cursor: default; flex-wrap: wrap; row-gap: 4px; padding-block: 10px; }
+.get-windows { display: flex; flex-wrap: wrap; gap: 10px; }
+.get-windows .btn { flex: 1 1 200px; justify-content: center; }
+.btn.soon small { font: 500 11px/1 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.75; }
+.windows .plans + .plans { margin-top: 14px; }
+.mono-inline { font-family: var(--mono); font-size: 0.9em; }
+.pricing .fine-print a { color: var(--red-ink); }
+@media (max-width: 640px) { .plan .btn { width: 100%; justify-content: center; } }
+
+/* how-to page */
+.howto { padding-block: clamp(32px, 5vw, 56px) clamp(64px, 8vw, 110px); }
+.howto-toc { display: flex; flex-wrap: wrap; gap: 8px; }
+.howto-toc a { font: 500 14px/1 var(--body); padding: 9px 13px; border-radius: 999px; background: var(--chip); color: var(--fg); text-decoration: none; }
+.howto-toc a:hover { background: var(--line); }
+.howto-group { margin-top: clamp(40px, 5vw, 64px); padding: 0; scroll-margin-top: 80px; }
+.howto-group h2 { font-size: clamp(26px, 3vw, 34px); font-weight: 750; letter-spacing: -0.015em; }
+.howto-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+.howto-card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; min-width: 0; scroll-margin-top: 80px; }
+.howto-video { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
+.howto-video img, .howto-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; object-fit: cover; }
+.howto-soon { position: absolute; right: 12px; top: 12px; font: 600 12px/1 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; padding: 8px 10px; border-radius: 999px; background: rgba(11, 14, 19, 0.82); color: var(--on-ink); }
+.howto-video.ready { cursor: pointer; }
+.howto-video.ready .howto-soon { background: var(--red); left: 50%; top: 50%; right: auto; transform: translate(-50%, -50%); font-size: 14px; padding: 14px 20px; }
+.howto-video.ready:hover .howto-soon, .howto-video.ready:focus-visible .howto-soon { background: #EC4237; }
+.howto-body { padding: 20px 22px 24px; display: flex; flex-direction: column; gap: 8px; }
+.howto-body .mono { color: var(--red-ink); }
+.howto-body h3 { font-size: 21px; font-weight: 700; letter-spacing: -0.015em; }
+.howto-body > p:not(.mono) { color: var(--fg-dim); font-size: 15.5px; line-height: 1.5; }
+.howto-body ol { margin: 6px 0 0; padding-left: 20px; display: flex; flex-direction: column; gap: 5px; color: var(--fg); font-size: 15px; line-height: 1.45; }
+.howto-more { margin-top: clamp(40px, 5vw, 64px); color: var(--fg-dim); }
+.howto-more a { color: var(--red-ink); }
+@media (max-width: 1024px) { .howto-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .howto-grid { grid-template-columns: minmax(0, 1fr); } }
