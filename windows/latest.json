@@ -1,5 +1,6 @@
 {
-  "version": "1.0.0",
+  "version": "1.8.0",
+  "date": "2026-10-11",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "First release of Rough-In Redlines for Windows."
+  "notes": "Password-protected PDFs: export with a password (AES-256) and open protected PDFs. The PDF for Bluebeam / Acrobat now looks right in every viewer (Chrome, Edge, Outlook, phone apps). Fixes: text and stamps no longer lose the first keystrokes, Find & Count no longer stops at \"1 found\", gentler Ctrl + mouse wheel zoom, no zero-length measurement on a double-click, Counts CSV reads right in Excel, clearer messages when an export fails."
 }
