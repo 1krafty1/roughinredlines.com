@@ -1,6 +1,6 @@
 {
-  "version": "1.8.2",
+  "version": "1.8.3",
   "date": "2026-10-12",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Find & Count finds every copy of a symbol again: when one copy lined up almost perfectly with the pixel grid, it could show only some of them (\"2 found\" of six identical symbols)."
+  "notes": "Find & Count finds every copy of a crisp symbol wherever it falls on the pixel grid: a copy drawn half a pixel differently from the one you boxed no longer looks like a look-alike (\"5 found\" of six identical triangles)."
 }
