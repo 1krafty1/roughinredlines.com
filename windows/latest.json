@@ -1,6 +1,6 @@
 {
-  "version": "1.8.1",
-  "date": "2026-10-11",
+  "version": "1.8.2",
+  "date": "2026-10-12",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Secured drawing sets (permissions only, no password) export again, and the sample drawing reopens instead of adding a copy. Counts CSV cells that start with =, +, - or @ are kept as text in Excel. Drawings with the same name get (2), (3); Compare shows each print's date and \"…\" while a sheet is still being compared. Search & redact no longer stacks boxes, the Count tool says to make a count first, Picture as JPG is only offered for photo sheets, a blank sheet no longer says it looks like a scan, and long notes, names and file names are kept in bounds."
+  "notes": "Find & Count finds every copy of a symbol again: when one copy lined up almost perfectly with the pixel grid, it could show only some of them (\"2 found\" of six identical symbols)."
 }
