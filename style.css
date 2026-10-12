@@ -296,3 +296,34 @@ footer a:hover { color: var(--on-ink); }
 .notify input[type=email]:focus-visible { outline: 3px solid var(--red); outline-offset: 2px; }
 .notify .btn { cursor: pointer; }
 .notify .fine { margin-top: 10px; }
+
+/* features by job (home page) */
+.jobs-toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.jobs-toc a { font: 500 14px/1 var(--body); padding: 9px 13px; border-radius: 999px; background: var(--chip); color: var(--fg); text-decoration: none; }
+.jobs-toc a:hover { background: var(--line); }
+.row, .jobs .tile { scroll-margin-top: 84px; }
+.jobs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: clamp(56px, 7vw, 96px); }
+.jobs .tile .mono { color: var(--red-ink); display: flex; align-items: center; gap: 8px; margin-top: 4px; }
+.jobs .tile.ink .mono { color: #FF6B61; }
+.jobs .tile h3 { margin-top: 0; }
+.jobs .ticks { margin-top: 4px; gap: 8px; }
+.jobs .ticks li { font-size: 15px; line-height: 1.45; }
+.jobs .tile.ink .ticks li { color: var(--on-ink); }
+.badge { font: 600 10.5px/1 var(--mono); font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 7px; border-radius: 6px; background: var(--chip); color: var(--fg); border: 1px solid var(--line); white-space: nowrap; vertical-align: 1px; }
+.watch { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 18px; font-size: 15px; }
+.jobs .watch { margin-top: auto; padding-top: 8px; }
+.row .text > .watch { color: var(--fg); font-size: 15px; }
+.watch .mono { color: var(--fg-dim) !important; font-size: 11.5px; margin: 0 !important; }
+.watch a { color: var(--red-ink); text-decoration: none; font-weight: 600; }
+.watch a::before { content: "▶"; font-size: 0.7em; margin-right: 6px; vertical-align: 1px; }
+.watch a:hover { text-decoration: underline; }
+.tile.ink .watch a { color: #FF8A82; }
+.tile.ink .watch .mono { color: var(--on-ink-dim) !important; }
+.promo { margin-top: clamp(40px, 5vw, 64px); max-width: 880px; }
+.promo-video { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); }
+.promo-video.ready .howto-soon { font-size: 16px; padding: 16px 26px; }
+.promo-cap { color: var(--fg-dim); margin-top: 14px; font-size: 16px; }
+.promo-cap b { color: var(--fg); }
+.hero .lede strong { color: var(--on-ink); font-weight: 600; }
+@media (max-width: 1024px) { .jobs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .jobs { grid-template-columns: minmax(0, 1fr); } }
