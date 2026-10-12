@@ -1,6 +1,6 @@
 {
-  "version": "1.8.4",
+  "version": "1.8.5",
   "date": "2026-10-12",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "The eraser and Select take the symbol or note inside a big box, not the box. ↓ / ↑ step through a count's marks. Notes go down to 1 pt for big drawings reduced to Letter. Find & Count finds symbols that are Bluebeam markups. New: Snapshot (G) copies an area as a picture; Ctrl+V pastes a picture onto a sheet."
+  "notes": "A Snapshot now pops open: Copy, Save as PNG, Open in Photos or Paste into drawing (Settings can turn the preview off). The Snapshot button on the bar shows its name. Plus 1.8.4: the eraser and Select take the item inside a big box, ↓ / ↑ through counts, 1-pt notes, Find & Count on Bluebeam markups."
 }
