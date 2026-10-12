@@ -1,6 +1,6 @@
 {
-  "version": "1.8.3",
+  "version": "1.8.4",
   "date": "2026-10-12",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Find & Count finds every copy of a crisp symbol wherever it falls on the pixel grid: a copy drawn half a pixel differently from the one you boxed no longer looks like a look-alike (\"5 found\" of six identical triangles)."
+  "notes": "The eraser and Select take the symbol or note inside a big box, not the box. ↓ / ↑ step through a count's marks. Notes go down to 1 pt for big drawings reduced to Letter. Find & Count finds symbols that are Bluebeam markups. New: Snapshot (G) copies an area as a picture; Ctrl+V pastes a picture onto a sheet."
 }
