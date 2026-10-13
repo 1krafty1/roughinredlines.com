@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How to Count Devices on a PDF Drawing — Rough-In Redlines</title>
+<meta name="description" content="Count receptacles, lights and other devices on a PDF drawing: manual tallies, count marks, and Find & Count, with tips for accurate totals and CSV export.">
+<meta name="theme-color" content="#0B0E13">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/touch-icon.png">
+<link rel="canonical" href="https://roughinredlines.com/count-devices-on-pdf.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Rough-In Redlines">
+<meta property="og:title" content="How to count devices on a PDF drawing">
+<meta property="og:description" content="Manual tallies, count marks and Find & Count, step by step, with tips for getting a total you can trust.">
+<meta property="og:url" content="https://roughinredlines.com/count-devices-on-pdf.html">
+<meta property="og:image" content="https://roughinredlines.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Article",
+   "headline": "How to count devices on a PDF drawing",
+   "description": "Count receptacles, lights and other devices on a PDF drawing: manual tallies, count marks, and Find & Count, with tips for accurate totals and CSV export.",
+   "url": "https://roughinredlines.com/count-devices-on-pdf.html",
+   "image": "https://roughinredlines.com/img/og.jpg",
+   "dateModified": "2026-10-13",
+   "author": {
+    "@type": "Organization",
+    "name": "Rough-In Redlines",
+    "url": "https://roughinredlines.com/"
+   },
+   "publisher": {
+    "@id": "https://roughinredlines.com/#org"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Can it count symbols on every sheet at once?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Find & Count can search the sheet you're on or every sheet in the set, and lists the matches by sheet. On Windows you can also pick certain pages."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why did Find & Count miss some devices?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Usually the box was loose, or it was drawn around the legend symbol, which is often bigger than the ones on the plan. Box one device on the plan tightly and try a looser Sensitivity setting, then add any stragglers by tapping them with the Count tool."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I get the counts into Excel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. Export the Counts CSV for totals by sheet and for the set. The flattened PDF also gets a count page."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does it work on scanned drawings?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Find & Count works best on clean CAD sheets. On a rough scan, use count marks and tap each device; the totals work the same way."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rough-In Redlines home"><img src="/img/logo.svg" width="46" height="46" alt=""><span><b>Rough-In</b> <small>REDLINES</small></span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="hide-sm" href="/#features">Features</a>
+      <a class="hide-sm" href="/#how">How it works</a>
+      <a class="hide-sm" href="/#pricing">Pricing</a>
+      <a class="hide-sm" href="/#windows">Windows</a>
+      <a class="hide-sm" href="/how-to.html">How-to</a>
+      <a href="/support.html">Support</a>
+      <a class="pill" href="/#notify">Get notified</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="page-head"><div class="wrap"><p class="mono">Guide · Count &amp; measure</p><h1>How to count devices on a PDF drawing</h1><p>Receptacles, fixtures, data drops, smoke detectors: somebody has to count them, and a missed device shows up later as a short order. Here are three ways to count on a PDF, from the old way to the fast one, and how to check the number before you trust it.</p></div></div>
+<div class="wrap"><article class="prose">
+<h2>Way 1: the highlighter and a tally</h2>
+<p>Print the sheet, run a highlighter over every duplex, and keep a tally in the margin. It works, and most of us learned this way. The trouble is that it's slow, it's easy to lose your place on a busy sheet, and when the next revision comes out you start over. On a PDF you can do the same thing faster and keep the result.</p>
+
+<h2>Way 2: count marks</h2>
+<p>Count marks are the digital tally. Each tap drops a numbered mark on the device and adds one to the total.</p>
+<ul>
+<li><strong>Start a count.</strong> Pick Count, then New count, and give it a name like "Duplex receptacles" or "2x4 troffers".</li>
+<li><strong>Tap each device.</strong> Every one gets a numbered mark. Tap a mark again to take it off.</li>
+<li><strong>Work in a pattern.</strong> Go room by room, or left to right in strips, so nothing gets skipped.</li>
+<li><strong>Use one count per device type.</strong> Separate counts keep separate totals, by sheet and for the whole set.</li>
+</ul>
+<p>Count marks are the right call on a small sheet, on a scanned print that's hard to read, or when the symbols aren't drawn consistently.</p>
+
+<h2>Way 3: Find &amp; Count</h2>
+<p>On a clean CAD sheet, let the app do the looking. In Rough-In Redlines, Find &amp; Count finds every copy of a symbol you box. It's on the iPad and on Windows.</p>
+<ul>
+<li><strong>Box one symbol.</strong> Open Find &amp; Count and drag a tight box around one symbol on the plan.</li>
+<li><strong>Pick where to look.</strong> This sheet or all sheets. On Windows you can also pick certain pages.</li>
+<li><strong>Check the matches.</strong> Every match is highlighted and listed by sheet. Tap a row to zoom to it, and untick anything that isn't the device.</li>
+<li><strong>Adjust the Sensitivity slider.</strong> Strict finds fewer, closer matches; Loose finds more. It filters right away, and your unticks are kept.</li>
+<li><strong>Create count.</strong> The kept matches become numbered count marks, in a new count or one you already have. Spots you already counted are skipped.</li>
+</ul>
+<div class="promo">
+  <div class="howto-video promo-video" data-youtube-id="qFadrKh1-Zg" data-title="Count and Find &amp; Count">
+    <img src="/img/how-to/04.jpg" width="1280" height="720" alt="How-to video: Count and Find &amp; Count" loading="lazy">
+    <span class="howto-soon">Video coming soon</span>
+  </div>
+  <p class="promo-cap"><b>Count and Find &amp; Count.</b> Count by tapping, or box one symbol and let Find &amp; Count mark every match. Shown on Windows; the iPad works the same way.</p>
+</div>
+
+<h2>Tips for a total you can trust</h2>
+<ul>
+<li><strong>Box the symbol tightly.</strong> Keep the box close around the symbol. Extra wall lines, text or a circuit number in the box make it look for those too.</li>
+<li><strong>Box one on the plan, not in the legend.</strong> Legend symbols are often drawn bigger than the ones on the floor plan. Box a typical device in a room so the size matches.</li>
+<li><strong>Watch for look-alikes.</strong> A duplex, a GFCI and a quad can differ by a letter or one line. Run them as separate searches, check the results, and untick the ones that belong to another count.</li>
+<li><strong>Scan the sheet after.</strong> Zoom out and look for a device with no mark: one under a note or a dimension line, or one turned at an odd angle.</li>
+<li><strong>Count each revision.</strong> When a new set comes out, <a href="/how-to.html#compare-revisions">compare it to the old one</a> to see what moved, then re-run the count on the new sheets.</li>
+</ul>
+
+<h2>Measure the runs while you're there</h2>
+<p>Counts usually come with footage. Pick Measure and Rough-In reads the scale off the sheet; tap Use it and measure distances and runs in feet and inches. No scale printed, or the sheet says NTS? Calibrate off a dimension you know. See <a href="/how-to.html#scale-and-measure">Scale &amp; measure</a>.</p>
+
+<h2>Get the totals to the estimator</h2>
+<ul>
+<li><strong>Counts CSV.</strong> Totals by sheet and for the set, plus runs, in a file that opens in Excel.</li>
+<li><strong>Count page in the PDF.</strong> The flattened PDF adds a page with the totals, so the counts travel with the drawing.</li>
+<li><strong>PDF for Bluebeam.</strong> Count marks stay editable for an office that uses Bluebeam or Acrobat. From the Windows app they arrive as Bluebeam Count measurements, totaled in Bluebeam. More on that in <a href="/bluebeam-alternative.html">A Bluebeam alternative for electricians</a>.</li>
+</ul>
+<p>Counting in the field? The counts come along in the <a href="/redline-as-builts-ipad.html">as-built redline</a> you send back.</p>
+<h2 id="faq">Questions foremen ask</h2>
+<dl>
+<dt>Can it count symbols on every sheet at once?</dt>
+<dd>Yes. Find &amp; Count can search the sheet you're on or every sheet in the set, and lists the matches by sheet. On Windows you can also pick certain pages.</dd>
+<dt>Why did Find &amp; Count miss some devices?</dt>
+<dd>Usually the box was loose, or it was drawn around the legend symbol, which is often bigger than the ones on the plan. Box one device on the plan tightly and try a looser Sensitivity setting, then add any stragglers by tapping them with the Count tool.</dd>
+<dt>Can I get the counts into Excel?</dt>
+<dd>Yes. Export the Counts CSV for totals by sheet and for the set. The flattened PDF also gets a count page.</dd>
+<dt>Does it work on scanned drawings?</dt>
+<dd>Find &amp; Count works best on clean CAD sheets. On a rough scan, use count marks and tap each device; the totals work the same way.</dd>
+</dl>
+<h2>More guides</h2>
+<ul>
+<li><a href="/bluebeam-alternative.html">A Bluebeam alternative for electricians</a>: When Bluebeam is the right tool, and when a field app fits better.</li>
+<li><a href="/redline-as-builts-ipad.html">Redline as-built drawings on an iPad</a>: A field workflow from the first cloud to the PDF the office keeps.</li>
+<li><a href="/how-to.html">How-to videos</a>: one job per video, each under a minute and a half.</li>
+</ul>
+<p class="fine-print">Bluebeam® Revu® is a trademark of Bluebeam, Inc. Rough-In Redlines is not affiliated with Bluebeam, Inc.</p>
+</article></div>
+<div class="final">
+  <svg class="cloud" viewBox="0 0 44 44" aria-hidden="true"><path d="M6 6a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 8 0a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1 0 8a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1-8 0a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8a4 4 0 0 1 0-8z" fill="none" stroke="#E0352B" stroke-width="1.2" stroke-linejoin="round"/></svg>
+  <section>
+    <div class="wrap">
+      <div>
+        <h2>Count the whole set in a minute.</h2>
+        <p>Rough-In Redlines is coming soon for iPad, iPhone, Mac and Windows. Free for your first 3 drawings, then $39.99 once.</p>
+      </div>
+      <div class="final-ctas">
+        <a class="btn btn-red" href="/#notify">Get notified at launch</a>
+        <a class="btn btn-ghost" href="/how-to.html">Watch the how-to videos</a>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 RK Technology LLC · North Dakota</span>
+    <nav aria-label="Footer"><a href="/how-to.html">How-to</a><a href="/guides.html">Guides</a><a href="/privacy.html">Privacy</a><a href="/support.html">Support</a><a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a></nav>
+  </div>
+</footer>
+<script>
+// The video: the poster becomes a play button that loads the privacy-enhanced player on click (as on how-to.html).
+document.querySelectorAll('.howto-video').forEach(function (box) {
+  var id = (box.dataset.youtubeId || '').trim();
+  if (!id) return;
+  box.classList.add('ready');
+  box.querySelector('.howto-soon').textContent = 'Play';
+  box.setAttribute('role', 'button'); box.tabIndex = 0; box.setAttribute('aria-label', 'Play video: ' + box.dataset.title);
+  var play = function () {
+    var f = document.createElement('iframe');
+    f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?autoplay=1&rel=0';
+    f.title = box.dataset.title; f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen'; f.allowFullscreen = true;
+    box.replaceChildren(f); box.classList.add('playing');
+  };
+  box.addEventListener('click', play, { once: true });
+  box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); play(); } });
+});
+</script>
+</body>
+</html>
