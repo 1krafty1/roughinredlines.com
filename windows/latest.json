@@ -1,6 +1,6 @@
 {
-  "version": "1.8.6",
+  "version": "1.8.7",
   "date": "2026-10-13",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Fill in PDF forms (type into fields, tick boxes, sign). Bluebeam PDFs now carry live Length, Polylength and Count measurements with the scale, and markups edited in Bluebeam come back as editable markups. Tabs reopen after a restart. New Mouse wheel setting (scroll or zoom). Fixes: the magnifier shows the drawing while dragging a measurement end; Find & Count with a tight box around a symbol."
+  "notes": "New Wheel: Scroll / Zoom switch in the status bar (and on the right-click menu). One page at a time has a scrollbar again and the first wheel click turns the page. Fill form: Tab into a field replaces its text, and answers too long for their box are written smaller so Acrobat and Bluebeam show all of it."
 }
