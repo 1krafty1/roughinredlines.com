@@ -1,6 +1,6 @@
 {
-  "version": "1.8.7",
+  "version": "1.8.8",
   "date": "2026-10-13",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "New Wheel: Scroll / Zoom switch in the status bar (and on the right-click menu). One page at a time has a scrollbar again and the first wheel click turns the page. Fill form: Tab into a field replaces its text, and answers too long for their box are written smaller so Acrobat and Bluebeam show all of it."
+  "notes": "Pen and highlighter strokes from the iPad now show on Windows (view only; erase them on the iPad), and nothing from the iPad is lost when you save a drawing and send it back."
 }
