@@ -1,6 +1,6 @@
 {
-  "version": "1.8.5",
-  "date": "2026-10-12",
+  "version": "1.8.6",
+  "date": "2026-10-13",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "A Snapshot now pops open: Copy, Save as PNG, Open in Photos or Paste into drawing (Settings can turn the preview off). The Snapshot button on the bar shows its name. Plus 1.8.4: the eraser and Select take the item inside a big box, ↓ / ↑ through counts, 1-pt notes, Find & Count on Bluebeam markups."
+  "notes": "Fill in PDF forms (type into fields, tick boxes, sign). Bluebeam PDFs now carry live Length, Polylength and Count measurements with the scale, and markups edited in Bluebeam come back as editable markups. Tabs reopen after a restart. New Mouse wheel setting (scroll or zoom). Fixes: the magnifier shows the drawing while dragging a measurement end; Find & Count with a tight box around a symbol."
 }
