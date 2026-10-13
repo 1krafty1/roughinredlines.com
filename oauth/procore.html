@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self'">
+<title>Connecting Procore — Rough-In Redlines</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f6f7f9; --fg: #0b0e13; --muted: #5b6472; --accent: #e4572e; --card: #fff; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0b0e13; --fg: #f2f4f7; --muted: #a3acb9; --card: #151a22; } }
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: var(--bg); color: var(--fg);
+         font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 0 16px; }
+  main { max-width: 420px; width: 100%; background: var(--card); border-radius: 16px; padding: 28px 24px; text-align: center;
+         box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  p { color: var(--muted); margin: 0 0 20px; }
+  a.button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600;
+             padding: 12px 22px; border-radius: 10px; }
+  a.button[hidden] { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <h1 id="title">Returning to the app…</h1>
+  <p id="msg">If the app doesn't open by itself, tap the button.</p>
+  <a class="button" id="back" href="#" hidden>Return to the app</a>
+</main>
+<script>
+// Procore sends the user here after "Connect Procore" (https redirect; Procore allows no custom schemes). This page only
+// hands code + state to the app on this device. No tracking, no third-party requests, nothing stored.
+(function () {
+  // The app picks the scheme with the start of `state` ("preview.<random>"); only these schemes are ever opened.
+  var schemes = { preview: "roughin-preview", roughin: "roughin", bei: "beiredline" };
+  var q = new URLSearchParams(location.search);
+  var state = q.get("state") || "";
+  var scheme = schemes[state.split(".")[0]] || schemes.preview;
+  var out = new URLSearchParams();
+  ["code", "state", "error", "error_description"].forEach(function (k) { if (q.get(k)) out.set(k, q.get(k)); });
+  // Keep the code out of the browser history.
+  try { history.replaceState(null, "", location.pathname); } catch (e) {}
+  if (!q.get("code") && !q.get("error")) {
+    document.getElementById("title").textContent = "Nothing to do here";
+    document.getElementById("msg").textContent = "Open Rough-In Redlines and tap Connect Procore.";
+    return;
+  }
+  var target = scheme + "://oauth/procore?" + out.toString();
+  var back = document.getElementById("back");
+  back.href = target;
+  back.hidden = false;
+  if (q.get("error")) {
+    document.getElementById("title").textContent = "Procore wasn't connected";
+    document.getElementById("msg").textContent = "Return to the app to try again.";
+  }
+  location.href = target;
+})();
+</script>
+</body>
+</html>
