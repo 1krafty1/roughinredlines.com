@@ -1,6 +1,6 @@
 {
-  "version": "1.8.8",
-  "date": "2026-10-13",
+  "version": "1.8.9",
+  "date": "2026-10-14",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Pen and highlighter strokes from the iPad now show on Windows (view only; erase them on the iPad), and nothing from the iPad is lost when you save a drawing and send it back."
+  "notes": "A PDF with form fields no longer shows a \"fillable fields\" bar every time it opens. To fill one in, click Fill form at the top."
 }
