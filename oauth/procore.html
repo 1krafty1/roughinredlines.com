@@ -32,7 +32,8 @@
 // hands code + state to the app on this device. No tracking, no third-party requests, nothing stored.
 (function () {
   // The app picks the scheme with the start of `state` ("preview.<random>"); only these schemes are ever opened.
-  var schemes = { preview: "roughin-preview", roughin: "roughin", bei: "beiredline" };
+  // beipreview: BEI Preview (Bergstrom's Teams pilot), installed next to BEI Redline, so it has its own scheme.
+  var schemes = { preview: "roughin-preview", roughin: "roughin", bei: "beiredline", beipreview: "beiredline-preview" };
   var q = new URLSearchParams(location.search);
   var state = q.get("state") || "";
   var scheme = schemes[state.split(".")[0]] || schemes.preview;
