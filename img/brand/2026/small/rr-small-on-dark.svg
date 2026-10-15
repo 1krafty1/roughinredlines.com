@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="276 284 694 694" width="200" height="200"><title>Rough-In Redlines</title><g transform="translate(7 23)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<g stroke="#E6E9EC">
+<path d="M321 861 V398 H455 C512 398 550 444 550 499 C550 556 510 601 452 601 H321" stroke-width="51.8"/>
+<path d="M412 604 L535 861" stroke-width="51.8"/>
+</g>
+<g stroke="#FF4A2E">
+<path d="M675 861 V336" stroke-width="51.8"/>
+<path d="M622 428 L675 324 L727 432" stroke-width="51.8"/>
+<path d="M770 347 V645 M820 347 V645" stroke-width="37"/>
+<path d="M786 600 L896 900" stroke-width="51.8"/>
+<path d="M812 836 L896 905 L912 808" stroke-width="51.8"/>
+<circle cx="801" cy="498" r="103" stroke-width="51.8"/>
+<circle cx="727" cy="440" r="31.45" fill="#FF4A2E" stroke="none"/>
+</g></g></svg>
