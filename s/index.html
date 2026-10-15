@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data: https://eiavugvfmqglqqwanpmf.supabase.co; connect-src https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
 <title>Shared files — Rough-In Redlines</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -25,7 +25,10 @@
   header { background: var(--ink); color: var(--on-ink); padding: 14px 16px; border-bottom: 1px solid rgba(255,255,255,.09); box-shadow: 0 1px 18px -6px rgba(255,58,30,.35); }
   header .bar { max-width: 760px; margin: 0 auto; display: flex; align-items: center; gap: 10px; }
   header img { width: 34px; height: 34px; }
-  header b { font-size: 18px; font-weight: 800; letter-spacing: -.01em; }
+  header img.company { width: auto; max-width: 160px; height: 40px; object-fit: contain; background: #fff; border-radius: 6px; padding: 2px; }
+  header b { font-size: 18px; font-weight: 800; letter-spacing: -.01em; overflow-wrap: anywhere; }
+  header.pending .bar { visibility: hidden; }
+  .project { color: var(--fg-dim); font: 600 13px/1.4 var(--mono); letter-spacing: .02em; margin: 0 0 6px; overflow-wrap: anywhere; }
   main { max-width: 760px; margin: 0 auto; padding: 20px 16px 48px; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
   h1 { font-size: clamp(24px, 5.4vw, 32px); font-weight: 800; letter-spacing: -.015em; line-height: 1.15; margin: 0 0 4px; overflow-wrap: anywhere; }
@@ -68,12 +71,13 @@
 </style>
 </head>
 <body>
-<header><div class="bar"><img src="/img/logo.svg" alt=""><b>Rough-In Redlines</b></div></header>
+<header id="brand" class="pending"><div class="bar"><img id="brand-logo" src="/img/logo.svg" alt=""><b id="brand-name">Rough-In Redlines</b></div></header>
+<noscript><style>header.pending .bar { visibility: visible; }</style></noscript>
 <main id="app" aria-live="polite">
   <div class="card msg" id="loading"><p>Opening the shared files…</p></div>
 </main>
 <footer>
-  Files shared with <a href="/">Rough-In Redlines</a>. Anyone with this link (and the PIN, if there is one) can download
+  <span id="footer-brand">Files shared with <a href="/">Rough-In Redlines</a>.</span> Anyone with this link (and the PIN, if there is one) can download
   these files until it expires. This page doesn't track you: no cookies, no analytics. The sender sees when files were
   downloaded (the time, the network's rough area and the browser), not who you are.
 </footer>
@@ -86,8 +90,43 @@
 var API = "https://eiavugvfmqglqqwanpmf.supabase.co/functions/v1/share-open"; // dev project; change with the production one
 var MAX_ZIP_BYTES = 4000 * 1024 * 1024;  // no ZIP64: "Download all" stops below 4 GB (files one by one still work)
 
-var state = { token: "", pin: null, grant: null, share: null, files: [], busy: false };
+var state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null };
 var app = document.getElementById("app");
+
+// The header and footer follow the sender's company (share-open "branding"): its logo (or the BE logo for Bergstrom)
+// and name; the "Shared securely with Rough-In Redlines" line only when show_footer. An answer without branding (an
+// older service, or a refusal before the link was found) shows Rough-In Redlines as before.
+function applyBranding(b) {
+  var header = document.getElementById("brand"), logo = document.getElementById("brand-logo"), name = document.getElementById("brand-name");
+  var foot = document.getElementById("footer-brand");
+  header.classList.remove("pending");
+  if (!b || typeof b !== "object" || !b.company_name) {
+    if (state.branded) return;
+    logo.className = ""; logo.src = "/img/logo.svg"; logo.alt = ""; logo.hidden = false;
+    name.textContent = "Rough-In Redlines";
+    foot.hidden = false; foot.textContent = "Files shared with "; foot.appendChild(el("a", { href: "/", text: "Rough-In Redlines" })); foot.appendChild(document.createTextNode("."));
+    document.title = "Shared files — Rough-In Redlines";
+    return;
+  }
+  state.branded = true;
+  var src = b.logo_url || (b.logo_default === "bei" ? "/img/be-logo.png" : "");
+  if (src) {
+    logo.className = "company"; logo.alt = b.company_name + " logo"; logo.hidden = false;
+    if (logo.getAttribute("src") !== src) logo.src = src;
+    logo.onerror = function () { logo.hidden = true; };
+  } else {
+    logo.hidden = true; logo.removeAttribute("src");
+  }
+  name.textContent = b.company_name;
+  foot.textContent = "";
+  if (b.show_footer === false) { foot.hidden = true; }
+  else { foot.hidden = false; foot.appendChild(document.createTextNode("Shared securely with ")); foot.appendChild(el("a", { href: "/", text: "Rough-In Redlines" })); foot.appendChild(document.createTextNode(".")); }
+  document.title = "Shared files — " + b.company_name;
+}
+function projectLabel(p) {
+  if (!p || !p.name) return "";
+  return p.number ? p.number + " \u00B7 " + p.name : p.name;
+}
 
 function el(tag, attrs, kids) {
   var n = document.createElement(tag);
@@ -171,6 +210,7 @@ function pinForm(message, from) {
 function handleError(r) {
   var b = r.body || {};
   if (b.from && state.share == null) state.share = { from: b.from };
+  applyBranding(b.branding);
   if (b.error === "pin_required") { state.pin = null; return pinForm("", b.from); }
   if (b.error === "wrong_pin") {
     state.pin = null;
@@ -189,7 +229,8 @@ function handleError(r) {
 function peek() {
   api({ action: "peek" }).then(function (r) {
     if (r.status !== 200) return handleError(r);
-    state.share = r.body.share; state.files = r.body.files || [];
+    state.share = r.body.share; state.files = r.body.files || []; state.project = r.body.project || null;
+    applyBranding(r.body.branding);
     render();
   });
 }
@@ -216,7 +257,9 @@ function render() {
     ]);
   }));
 
+  var proj = projectLabel(state.project);
   show(el("div", { class: "card", "data-state": "ready" }, [
+    proj ? el("p", { class: "project", id: "project", text: proj }) : null,
     el("h1", { text: s.title || (state.files.length === 1 ? base(state.files[0].name) : "Shared files") }),
     el("p", { class: "from", text: "From " + s.from }),
     s.note ? el("p", { class: "note", text: s.note }) : null,
@@ -346,11 +389,11 @@ window.__shareZip = { zipStore: zipStore, crc32: crc32 }; // for the page's test
 
 function start() {
   state.token = decodeURIComponent((location.hash || "").replace(/^#/, "")).trim();
-  if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) return refusal("not_found");
+  if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) { applyBranding(null); return refusal("not_found"); }
   show(el("div", { class: "card msg", id: "loading" }, [el("p", { text: "Opening the shared files…" })]));
   peek();
 }
-window.addEventListener("hashchange", function () { state = { token: "", pin: null, grant: null, share: null, files: [], busy: false }; start(); });
+window.addEventListener("hashchange", function () { state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null }; start(); });
 start();
 </script>
 </body>
