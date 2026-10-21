@@ -50,17 +50,21 @@
    "offers": [
     {
      "@type": "Offer",
-     "name": "Free",
+     "name": "Rough-In Redlines for Windows (Free)",
      "price": "0",
      "priceCurrency": "USD",
-     "description": "Full app for your first 3 drawings"
+     "availability": "https://schema.org/InStock",
+     "url": "https://apps.microsoft.com/detail/9N7GGCQNF7K7",
+     "description": "Full Windows app for your first 3 drawings, from the Microsoft Store"
     },
     {
      "@type": "Offer",
-     "name": "Rough-In Pro",
+     "name": "Rough-In Pro for Windows",
      "price": "39.99",
      "priceCurrency": "USD",
-     "description": "Unlimited drawings, one-time purchase, no subscription"
+     "availability": "https://schema.org/InStock",
+     "url": "https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b",
+     "description": "Unlimited drawings on Windows, one-time purchase, license key by email for 2 PCs, no subscription"
     }
    ],
    "featureList": [
@@ -108,15 +112,15 @@
       <h1>Mark up the <span class="mark">prints<svg viewBox="0 0 300 30" preserveAspectRatio="none" aria-hidden="true"><path d="M4 20 C 60 6, 140 4, 296 14" fill="none" stroke="#FF3A1E" stroke-width="7" stroke-linecap="round"/></svg></span>, not a&nbsp;notepad.</h1>
       <p class="lede"><strong>For the field and the office.</strong> Redline, count, measure, compare, sign and print your drawings on the iPad or the office PC, then send exactly what the PM needs, even a PDF they can keep editing in Bluebeam. <strong>No subscription. Your drawings stay on your device.</strong></p>
       <div class="ctas">
-        <!-- App Store button placeholder: one App Store listing covers iPad, iPhone and Mac (Apple silicon,
-             "Designed for iPad"). At launch replace this span with Apple's official "Download on the App Store"
-             badge linking to https://apps.apple.com/app/id6819901021 (the same link opens the Mac App Store on a Mac). -->
-        <a class="btn btn-red" href="https://apps.microsoft.com/detail/9N7GGCQNF7K7" rel="noopener">Get it for Windows</a>
-        <span class="btn btn-ghost appstore-placeholder" role="note" data-app-store-id="6819901021" title="One App Store download for iPad, iPhone and Mac">Coming soon to the App Store</span>
-        <a class="btn btn-ghost" href="#how">See how it works</a>
+        <a class="btn btn-red" href="https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b" rel="noopener">Buy Pro for Windows · $39.99</a>
+        <a class="btn btn-ghost" href="https://apps.microsoft.com/detail/9N7GGCQNF7K7" rel="noopener">Free · Microsoft Store</a>
       </div>
+      <p class="fine cta-note">Windows 10 &amp; 11 · Free for 3 drawings · Pro is one payment, key by email, works on 2 PCs · <a href="#windows">How it works</a></p>
       <form class="notify" id="notify" action="https://buttondown.com/api/emails/embed-subscribe/randykraft" method="post" aria-label="Get notified at launch">
-        <label for="notify-email">Get notified when the iPad app launches</label>
+        <!-- App Store placeholder: one App Store listing covers iPad, iPhone and Mac (Apple silicon, "Designed for iPad").
+             At launch put Apple's official "Download on the App Store" badge (https://apps.apple.com/app/id6819901021)
+             in the .ctas row above, next to the Windows buttons, and drop this form. -->
+        <label for="notify-email"><span class="soon-tag mono" data-app-store-id="6819901021">App Store · coming soon</span> Get notified when it launches on iPad, iPhone &amp; Mac</label>
         <div class="notify-row">
           <input id="notify-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
           <input type="hidden" name="tag" value="launch">
@@ -294,56 +298,66 @@
       <h2>Every tool free. Pay once when it runs your jobs.</h2>
       <p>Free covers three drawings with nothing held back. Rough-In Pro unlocks unlimited drawings with a single purchase. No subscription.</p>
     </div>
-    <!-- Price is a placeholder until launch (App Store Connect sets the real one). -->
-    <div class="plans">
-      <div class="plan rise">
-        <div class="name"><h3>Free</h3><span class="mono">To start</span></div>
-        <div class="price"><b>$0</b></div>
-        <p>Every tool on up to <strong>3 drawings</strong>. The built-in sample drawing doesn't count.</p>
-        <ul class="ticks"><li>Markup, 600+ trade symbols, measure and counts</li><li>Compare prints and panel schedules</li><li>Flattened PDF, Bluebeam-ready PDF, Excel and CSV</li></ul>
+    <div class="plans-group">
+      <p class="plans-label mono"><i class="dot-live"></i>Windows 10 &amp; 11 · available now</p>
+      <div class="plans">
+        <div class="plan rise">
+          <div class="name"><h3>Free</h3><span class="mono">To start</span></div>
+          <div class="price"><b>$0</b></div>
+          <p>Every tool on up to <strong>3 drawings</strong>. No account, no sign-up.</p>
+          <ul class="ticks"><li>Markup, 600+ trade symbols, Find &amp; Count and measure</li><li>Sign, redact, combine, print and compare revisions</li><li>Bluebeam-ready PDF, flattened PDF and counts CSV</li></ul>
+          <a class="btn btn-line" href="https://apps.microsoft.com/detail/9N7GGCQNF7K7" rel="noopener">Free download · Microsoft Store</a>
+        </div>
+        <div class="plan pro rise">
+          <div class="name"><h3>Pro for Windows</h3><span class="mono">One-time purchase</span></div>
+          <div class="price"><b>$39.99</b><span>once</span></div>
+          <p class="per"><strong>Unlimited drawings.</strong> No subscription, no renewals.</p>
+          <ul class="ticks"><li>Everything in Free, on as many drawings as you open</li><li>License key by email, works on 2 PCs</li><li>Works offline once it's activated</li></ul>
+          <a class="btn btn-red" href="https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b" rel="noopener">Buy Pro for Windows · $39.99</a>
+        </div>
       </div>
-      <div class="plan pro rise">
-        <div class="name"><h3>Pro</h3><span class="mono">One-time purchase</span></div>
-        <div class="price"><b>$39.99</b><span>once</span></div>
-        <p class="per"><strong>Yours forever.</strong> No subscription, no renewals.</p>
-        <ul class="ticks"><li>Unlimited drawings and sheet sets</li><li>Everything in Free</li><li>Restore it on your other iPad, iPhone or Mac with the same Apple Account</li></ul>
-      </div>
+      <p class="fine-print">Price in US dollars. Sold by Lemon Squeezy, our reseller, which handles payment and tax. Already have the free app? Click <strong>Unlock Pro</strong> in it and paste your key. <a href="/support.html#buying-windows">How buying works</a></p>
     </div>
-    <p class="fine-print">Price in US dollars; the App Store shows your local price. Pro is a one-time in-app purchase billed through your Apple Account. Drawings already on your iPad keep working with or without Pro.</p>
-    <p class="fine-print" id="mac">On a Mac? Rough-In Redlines runs on Macs with Apple silicon (M1 or newer): the same App Store download and the same Pro purchase as your iPad, so you don't pay twice. Draw with the mouse or trackpad. On an Intel Mac, use the <a href="#windows">Windows version</a>.</p>
-    <p class="fine-print">In the office on a PC? <a href="#windows">Rough-In Redlines is on Windows too</a>, same deal: free for 3 drawings, $39.99 once for Pro.</p>
+    <!-- iPad prices are placeholders until launch (App Store Connect sets the real one). -->
+    <div class="plans-group">
+      <p class="plans-label mono"><i class="dot-soon"></i>iPad, iPhone &amp; Mac · coming soon to the App Store</p>
+      <div class="plans">
+        <div class="plan plan-soon rise">
+          <div class="name"><h3>Free</h3><span class="mono">To start</span></div>
+          <div class="price"><b>$0</b></div>
+          <p>Every tool on up to <strong>3 drawings</strong>. The built-in sample drawing doesn't count.</p>
+          <ul class="ticks"><li>Markup, 600+ trade symbols, measure and counts</li><li>Compare prints and panel schedules</li><li>Flattened PDF, Bluebeam-ready PDF, Excel and CSV</li></ul>
+        </div>
+        <div class="plan plan-soon rise">
+          <div class="name"><h3>Pro</h3><span class="mono">One-time purchase</span></div>
+          <div class="price"><b>$39.99</b><span>once</span></div>
+          <p class="per"><strong>Yours forever.</strong> No subscription, no renewals.</p>
+          <ul class="ticks"><li>Unlimited drawings and sheet sets</li><li>Everything in Free</li><li>Restore it on your other iPad, iPhone or Mac with the same Apple Account</li></ul>
+        </div>
+      </div>
+      <p class="fine-print">Price in US dollars; the App Store will show your local price. Pro will be a one-time in-app purchase billed through your Apple Account. <a href="#notify">Get notified when it launches</a>.</p>
+      <p class="fine-print" id="mac">On a Mac? Rough-In Redlines will run on Macs with Apple silicon (M1 or newer): the same App Store download and the same Pro purchase as your iPad, so you don't pay twice. On an Intel Mac, use the <a href="#windows">Windows version</a>.</p>
+      <p class="fine-print">Rough-In Pro on the iPad and on Windows are bought separately.</p>
+    </div>
   </div>
 </section>
 
 <section id="windows" class="windows">
   <div class="wrap">
     <div class="sec-head rise">
-      <p class="mono">Also on Windows · coming soon</p>
+      <p class="mono">Windows 10 &amp; 11 · available now</p>
       <h2>Rough-In Redlines for Windows.</h2>
       <p>The same redline tool on the office PC or the trailer laptop. Mark up with a mouse or pen, count and measure, then save a <span class="mono-inline">.redline</span> file that opens on the iPad, and back again.</p>
     </div>
-    <div class="plans">
-      <div class="plan rise">
-        <div class="name"><h3>Free</h3><span class="mono">Windows 10 &amp; 11</span></div>
-        <div class="price"><b>$0</b></div>
-        <p>Every tool on up to <strong>3 drawings</strong>. No account, no sign-up.</p>
-        <ul class="ticks"><li>Markup with 600+ symbols in 18 trade libraries, Find &amp; Count and measure</li><li>Sign, redact, combine files and insert Word, Excel and picture pages</li><li>Print to any printer or plotter</li><li>Compare revisions</li><li>Bluebeam / Acrobat-editable PDF, flattened PDF and counts CSV</li><li>My Palettes, Capture Symbol and Bluebeam Tool Chest (.btx) import</li></ul>
-        <div class="get-windows">
-          <a class="btn btn-line" href="https://apps.microsoft.com/detail/9N7GGCQNF7K7" rel="noopener">Get it from Microsoft</a>
-        </div>
-      </div>
-      <div class="plan pro rise">
-        <div class="name"><h3>Pro for Windows</h3><span class="mono">One-time purchase</span></div>
-        <div class="price"><b>$39.99</b><span>once</span></div>
-        <p class="per"><strong>Unlimited drawings.</strong> No subscription, no renewals.</p>
-        <ul class="ticks"><li>Everything in Free, on as many drawings as you open</li><li>One license key covers 2 PCs</li><li>Works offline once it's activated</li></ul>
-        <a class="btn btn-red" href="https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b" rel="noopener">Buy Rough-In Pro for Windows</a>
-      </div>
+    <div class="ctas-line rise">
+      <a class="btn btn-red" href="https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b" rel="noopener">Buy Pro for Windows · $39.99</a>
+      <a class="btn btn-line" href="https://apps.microsoft.com/detail/9N7GGCQNF7K7" rel="noopener">Free download · Microsoft Store</a>
+      <a class="text-link" href="#pricing">Compare Free and Pro</a>
     </div>
     <div class="plans">
       <div class="plan rise">
         <div class="name"><h3>How the license works</h3></div>
-        <ul class="ticks"><li>Buy Pro and your license key arrives by email</li><li>Paste it into the app to activate. One key works on 2 PCs</li><li>After activation it works offline, no signal needed</li><li><span>New PC? Use <strong>Deactivate this PC</strong> on the old one, then activate the new one</span></li></ul>
+        <ul class="ticks"><li>Buy Pro and your license key arrives by email</li><li><span>In the app, click <strong>Unlock Pro</strong> and paste the key. One key works on 2 PCs</span></li><li>After activation it works offline, no signal needed</li><li><span>New PC? Use <strong>Deactivate this PC</strong> on the old one, then activate the new one</span></li></ul>
       </div>
       <div class="plan rise">
         <div class="name"><h3>System requirements</h3></div>
@@ -353,7 +367,7 @@
     <!-- Randy: the unsigned installer will trigger a Windows SmartScreen "Windows protected your PC" prompt
          (More info → Run anyway) until code signing is set up. Deliberately not mentioned on the page;
          add a line to the support page if you ship before signing. -->
-    <p class="fine-print">Price in US dollars. Windows purchases and license keys are handled by Lemon Squeezy, our reseller, whether you buy here or from inside the Microsoft Store version; the same key works in both. Panel schedules are on the iPad for now. Rough-In Pro on the iPad and on Windows are bought separately.</p>
+    <p class="fine-print">Windows purchases and license keys are handled by Lemon Squeezy, our reseller, whether you buy here or from inside the Microsoft Store version; the same key works in both. Panel schedules are on the iPad for now. <a href="/support.html#buying-windows">How buying works on Windows</a></p>
   </div>
 </section>
 
@@ -363,12 +377,12 @@
     <div class="wrap">
       <div>
         <h2>Put the prints in your pocket.</h2>
-        <p>Rough-In Redlines is coming to the App Store for iPad, iPhone and Mac. Want to try it early on your crew? Send us a note.</p>
+        <p>On the office PC today, free for 3 drawings. Coming soon to the App Store for iPad, iPhone and Mac. Want it early on your crew's iPads? <a href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">Send us a note</a>.</p>
       </div>
       <div class="final-ctas">
-        <!-- App Store button placeholder (iPad, iPhone and Mac): replace with the official badge at launch, as in the hero. -->
-        <span class="btn btn-ghost appstore-placeholder" role="note" data-app-store-id="6819901021" title="One App Store download for iPad, iPhone and Mac">App Store · coming soon</span>
-        <a class="btn btn-red" href="mailto:support@roughinredlines.com?subject=Rough-In%20Redlines%20early%20access">Get early access</a>
+        <!-- At App Store launch add the official badge here (iPad, iPhone and Mac), as in the hero. -->
+        <a class="btn btn-red" href="https://roughinredlines.lemonsqueezy.com/checkout/buy/a63ad789-b069-4a0f-98ad-f7b49bfaef1b" rel="noopener">Buy Pro for Windows · $39.99</a>
+        <a class="btn btn-ghost" href="#notify">Get notified for iPad</a>
       </div>
     </div>
   </section>

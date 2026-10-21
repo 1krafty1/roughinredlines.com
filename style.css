@@ -369,3 +369,23 @@ picture { display: block; }
   .hero .wrap { padding-block: clamp(40px, 5vw, 72px) clamp(64px, 8vw, 112px); }
   .hero-logo { width: clamp(150px, 14vw, 210px); }
 }
+
+/* Windows on sale: hero buy row, pricing groups (available now / coming soon) */
+.hero .cta-note { margin-top: 14px; max-width: 34em; }
+.hero .notify { margin-top: 30px; padding-top: 24px; border-top: 1px solid var(--ink-line); }
+.soon-tag { display: block; width: fit-content; margin-bottom: 10px; padding: 5px 9px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.22); color: var(--on-ink-dim); font-size: 11px; line-height: 1; }
+.plans-group + .plans-group { margin-top: clamp(48px, 6vw, 72px); }
+.plans-group .plans { margin-top: 16px; }
+.plans-label { display: flex; align-items: center; gap: 10px; margin-top: clamp(36px, 5vw, 56px); color: var(--fg); }
+.plans-label i { width: 8px; height: 8px; border-radius: 50%; flex: none; }
+.plans-label .dot-live { background: var(--red-glow); box-shadow: 0 0 0 4px rgba(255,58,30,0.2), 0 0 12px rgba(255,58,30,0.8); }
+.plans-label .dot-soon { border: 1.5px solid var(--fg-dim); }
+.plan-soon .price b { color: var(--fg-dim); }
+.plan-soon .ticks li::before { filter: grayscale(1); opacity: 0.7; }
+.ctas-line { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 14px; margin-top: clamp(28px, 4vw, 40px); }
+.text-link { color: var(--red-ink); font-weight: 600; margin-left: 6px; }
+.windows .fine-print a { color: var(--red-ink); }
+@media (max-width: 640px) {
+  .ctas-line .btn { width: 100%; justify-content: center; }
+  .text-link { margin-left: 0; }
+}
