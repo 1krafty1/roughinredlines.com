@@ -389,6 +389,12 @@ window.__shareZip = { zipStore: zipStore, crc32: crc32 }; // for the page's test
 
 function start() {
   state.token = decodeURIComponent((location.hash || "").replace(/^#/, "")).trim();
+  // Email security scanners and some mail apps rewrite the "#" as "%23" or drop it, or add tracking after the token:
+  // find a 43-character token anywhere after "/s/" so a mangled link still opens.
+  if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) {
+    var m = decodeURIComponent(location.href).match(/\/s\/(?:index\.html)?[?#\/]*(?:t=)?([A-Za-z0-9_-]{43})(?![A-Za-z0-9_-])/);
+    if (m) { state.token = m[1]; try { history.replaceState(null, "", "/s/#" + m[1]); } catch (e) {} }
+  }
   if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) { applyBranding(null); return refusal("not_found"); }
   show(el("div", { class: "card msg", id: "loading" }, [el("p", { text: "Opening the shared files…" })]));
   peek();
