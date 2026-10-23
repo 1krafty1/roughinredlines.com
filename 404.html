@@ -13,6 +13,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="/style.css">
+<script>
+// A share link whose "#" an email app turned into "%23" (or dropped) lands here as /s/%23<token>: send it to the share page.
+(function () { var m = decodeURIComponent(location.pathname + location.search + location.hash).match(/^\/s\/[^A-Za-z0-9_-]*(?:t=)?([A-Za-z0-9_-]{43})(?![A-Za-z0-9_-])/); if (m) location.replace("/s/#" + m[1]); })();
+</script>
 </head>
 <body>
 <header class="nav">
