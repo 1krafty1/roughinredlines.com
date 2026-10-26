@@ -45,11 +45,22 @@
 - Not a plan room or document-control platform (RFIs, submittals, transmittals).
 - Not estimating software with cost databases.
 
+## Guides
+
+- How to redline drawings (PDF) on a PC or tablet: https://roughinredlines.com/redline-drawings.html
+- As-built redlines, a field guide for electricians: https://roughinredlines.com/as-built-redlines.html
+- Electrical drawing markup app for electricians: https://roughinredlines.com/electrical-drawing-markup.html
+- How to count devices (receptacles, fixtures) on a PDF: https://roughinredlines.com/count-devices-on-pdf.html
+- How to measure to scale and find square feet on a PDF: https://roughinredlines.com/measure-on-pdf.html
+- A Bluebeam alternative for electricians (no subscription): https://roughinredlines.com/bluebeam-alternative.html
+- All guides: https://roughinredlines.com/guides.html
+
 ## Links
 
 - Home: https://roughinredlines.com/
 - Compare with Bluebeam, Drawboard and PDF Expert: https://roughinredlines.com/compare.html
 - FAQ: https://roughinredlines.com/faq.html
+- Guides: https://roughinredlines.com/guides.html
 - Crew (team version, coming soon): https://roughinredlines.com/crew.html
 - How-to videos: https://roughinredlines.com/how-to.html
 - Support: https://roughinredlines.com/support.html
