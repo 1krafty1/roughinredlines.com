@@ -1,0 +1,58 @@
+# Rough-In Redlines
+
+> PDF markup for the trades: electricians, mechanical and plumbing contractors, estimators and project managers. Redline drawings, place trade symbols, count devices, measure to scale and send the office a PDF they can keep editing in Bluebeam or Acrobat. One-time price, no subscription. Made by RK Technology LLC (North Dakota, USA).
+
+## Platforms (as of October 2026)
+
+- Windows 10 and 11: available now on the Microsoft Store (also a standard Windows installer).
+- iPad, iPhone and Mac (Apple silicon): coming soon to the App Store. Not available yet.
+- Android tablets: in development. Not available yet.
+
+## Pricing
+
+- Free: every tool on up to 3 drawings. No account, no sign-up.
+- Rough-In Pro for Windows: $39.99 USD, one-time purchase, unlimited drawings, license key by email that works on 2 PCs. No subscription.
+- Crew (team version): coming soon, $15 per person per month. Not available yet.
+
+## Features in the current Windows version
+
+- Clouds, pen, highlighter, text and callouts
+- Electrical and trade symbols (600+ in 18 libraries), stamps and signatures
+- Photos pinned on the drawing
+- Count and Find & Count (box one symbol, find the rest on every sheet); counts export to CSV
+- Measure in feet and inches, with the scale read from the title block
+- Compare two drawing revisions
+- Redact (removes the content underneath)
+- Fill PDF forms
+- PDF export with markups that stay editable in Bluebeam Revu and Adobe Acrobat
+- Panel schedules
+- Pages view, combine files, print and plot (up to 36x48)
+- Works offline; files stay on your device; no account needed for Free or Pro
+
+## Coming in the next update (not available yet)
+
+- Snap to the drawing (line ends, corners, crossings)
+- Area in square feet
+- Lengths shown on lines and boxes while drawing
+- Align and group markups
+- Symbols snap into evenly spaced rows
+- Search text across sheets
+- Local projects
+
+## What it is not
+
+- Not CAD: it marks up PDFs and pictures, it doesn't draw or edit DWG files.
+- Not a plan room or document-control platform (RFIs, submittals, transmittals).
+- Not estimating software with cost databases.
+
+## Links
+
+- Home: https://roughinredlines.com/
+- Compare with Bluebeam, Drawboard and PDF Expert: https://roughinredlines.com/compare.html
+- FAQ: https://roughinredlines.com/faq.html
+- Crew (team version, coming soon): https://roughinredlines.com/crew.html
+- How-to videos: https://roughinredlines.com/how-to.html
+- Support: https://roughinredlines.com/support.html
+- Privacy: https://roughinredlines.com/privacy.html
+- Microsoft Store: https://apps.microsoft.com/detail/9N7GGCQNF7K7
+- Contact: support@roughinredlines.com
