@@ -25,7 +25,7 @@
 - Redact (removes the content underneath)
 - Fill PDF forms
 - PDF export with markups that stay editable in Bluebeam Revu and Adobe Acrobat
-- Panel schedules
+- Panel schedules (iPad; Windows in the next update)
 - Pages view, combine files, print and plot (up to 36x48)
 - Works offline; files stay on your device; no account needed for Free or Pro
 
