@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data: https://eiavugvfmqglqqwanpmf.supabase.co; connect-src https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data: https://noeyxudzjruectngwswt.supabase.co https://eiavugvfmqglqqwanpmf.supabase.co; connect-src https://noeyxudzjruectngwswt.supabase.co https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
 <title>Shared files — Rough-In Redlines</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -87,10 +87,15 @@
 // Share links (V2 addition 6). The token is after "#" in the address, so it never reaches a web server's logs; this
 // page sends it only to the share-open function (Teams service), which answers with the file list and short-lived
 // download URLs. Nothing is stored in the browser.
-var API = "https://eiavugvfmqglqqwanpmf.supabase.co/functions/v1/share-open"; // dev project; change with the production one
+// The real apps make links on the PRODUCTION Teams service (roughin-teams-prod); test builds (RR Preview, 2.1 TEST) on
+// the DEV one (roughin-teams-dev). A link marked "?env=dev" (before the "#") asks DEV first; any other link asks PROD,
+// and if PROD has never heard of it ("not_found"), DEV, so older test links keep working. The token goes to no other host.
+var HOSTS = { prod: "https://noeyxudzjruectngwswt.supabase.co", dev: "https://eiavugvfmqglqqwanpmf.supabase.co" };
+var FN = "/functions/v1/share-open";
+function hostOrder() { return /[?&]env=dev(?![A-Za-z0-9_-])/.test(location.search) ? [HOSTS.dev, HOSTS.prod] : [HOSTS.prod, HOSTS.dev]; }
 var MAX_ZIP_BYTES = 4000 * 1024 * 1024;  // no ZIP64: "Download all" stops below 4 GB (files one by one still work)
 
-var state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null };
+var state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null, hosts: hostOrder(), host: 0 };
 var app = document.getElementById("app");
 
 // The header and footer follow the sender's company (share-open "branding"): its logo (or the BE logo for Bergstrom)
@@ -162,7 +167,7 @@ function folder(name) { var p = name.split("/"); p.pop(); return p.join(" / "); 
 function api(body) {
   var payload = Object.assign({ token: state.token }, body);
   if (state.pin) payload.pin = state.pin;
-  return fetch(API, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" })
+  return fetch(state.hosts[state.host] + FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" })
     .then(function (r) { return r.json().catch(function () { return {}; }).then(function (j) { return { status: r.status, body: j || {} }; }); },
           function () { return { status: 0, body: { error: "offline", message: "No connection. Check your internet and try again." } }; });
 }
@@ -228,6 +233,10 @@ function handleError(r) {
 
 function peek() {
   api({ action: "peek" }).then(function (r) {
+    // Not on this service: try the other one (only while the link hasn't been found anywhere yet).
+    if (r.status === 404 && (r.body || {}).error === "not_found" && state.share == null && state.host + 1 < state.hosts.length) {
+      state.host++; return peek();
+    }
     if (r.status !== 200) return handleError(r);
     state.share = r.body.share; state.files = r.body.files || []; state.project = r.body.project || null;
     applyBranding(r.body.branding);
@@ -392,14 +401,14 @@ function start() {
   // Email security scanners and some mail apps rewrite the "#" as "%23" or drop it, or add tracking after the token:
   // find a 43-character token anywhere after "/s/" so a mangled link still opens.
   if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) {
-    var m = decodeURIComponent(location.href).match(/\/s\/(?:index\.html)?[?#\/]*(?:t=)?([A-Za-z0-9_-]{43})(?![A-Za-z0-9_-])/);
-    if (m) { state.token = m[1]; try { history.replaceState(null, "", "/s/#" + m[1]); } catch (e) {} }
+    var m = decodeURIComponent(location.href).replace(/env=dev&?/, "").match(/\/s\/(?:index\.html)?[?#\/]*(?:t=)?([A-Za-z0-9_-]{43})(?![A-Za-z0-9_-])/);
+    if (m) { state.token = m[1]; try { history.replaceState(null, "", "/s/" + location.search + "#" + m[1]); } catch (e) {} }
   }
   if (!/^[A-Za-z0-9_-]{43}$/.test(state.token)) { applyBranding(null); return refusal("not_found"); }
   show(el("div", { class: "card msg", id: "loading" }, [el("p", { text: "Opening the shared files…" })]));
   peek();
 }
-window.addEventListener("hashchange", function () { state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null }; start(); });
+window.addEventListener("hashchange", function () { state = { token: "", pin: null, grant: null, share: null, files: [], busy: false, branded: false, project: null, hosts: hostOrder(), host: 0 }; start(); });
 start();
 </script>
 </body>

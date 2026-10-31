@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'self' data:; connect-src https://noeyxudzjruectngwswt.supabase.co https://eiavugvfmqglqqwanpmf.supabase.co; base-uri 'none'; form-action 'none'">
 <meta name="color-scheme" content="light dark">
 <title>Unsubscribe — Rough-In Redlines</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -47,7 +47,9 @@
 </div></main>
 <script>
 (function () {
-  var API = "https://eiavugvfmqglqqwanpmf.supabase.co/functions/v1/notify"; // dev project; change with the production one
+  // Real users' emails come from the PRODUCTION Teams service (roughin-teams-prod). Only a link that says env=dev (a test
+  // build's email from roughin-teams-dev) goes to DEV.
+  var HOSTS = { prod: "https://noeyxudzjruectngwswt.supabase.co", dev: "https://eiavugvfmqglqqwanpmf.supabase.co" };
   var LABELS = { assigned: "Assigned to you", status: "Status changes on your items", verify: "Done items to verify", comment: "Comments",
     mention: "@mentions", revision_items: "New revisions on sheets with your open items", revision: "Other new revisions", inbox: "Office inbox" };
   var q = {};
@@ -70,7 +72,7 @@
     : "You'll stop getting “" + LABELS[q.k] + "” emails. Other emails and the app's notifications don't change. You can turn them back on in the app: account button → Notifications.";
   go.addEventListener("click", function () {
     go.disabled = true; msg.className = ""; msg.textContent = "Unsubscribing…";
-    var url = API + "?u=" + encodeURIComponent(q.u) + "&k=" + encodeURIComponent(q.k) + "&t=" + encodeURIComponent(q.t);
+    var url = (q.env === "dev" ? HOSTS.dev : HOSTS.prod) + "/functions/v1/notify?u=" + encodeURIComponent(q.u) + "&k=" + encodeURIComponent(q.k) + "&t=" + encodeURIComponent(q.t);
     fetch(url, { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: "List-Unsubscribe=One-Click",
                  cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" })
       .then(function (r) {
