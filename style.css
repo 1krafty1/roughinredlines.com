@@ -58,7 +58,7 @@ p { margin: 0; }
 .nav-links a { text-decoration: none; color: var(--on-ink-dim); transition: color 0.15s ease; }
 .nav-links a:hover, .nav-links a[aria-current] { color: var(--on-ink); }
 .nav-links .pill { color: var(--on-ink); border: 1px solid rgba(255,255,255,0.22); padding: 7px 14px; border-radius: 999px; }
-@media (max-width: 640px) { .nav-links .hide-sm { display: none; } }
+@media (max-width: 940px) { .nav-links .hide-sm { display: none; } }
 @media (max-width: 430px) { .brand small { display: none; } .nav-links .pill { padding: 7px 12px; } }
 
 /* ---------- buttons ---------- */
@@ -589,3 +589,6 @@ picture { display: block; }
 .download { position: relative; }
 .plans.dl-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .dl-grid .plan .btn { margin-top: auto; }
+.dl-grid .plan .name { flex-direction: column; align-items: flex-start; gap: 6px; }
+.dl-grid .plan .btn { justify-content: center; }
+.dl-grid .plan .btn { width: 100%; text-align: center; line-height: 1.2; }
