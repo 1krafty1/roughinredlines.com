@@ -58,7 +58,7 @@ p { margin: 0; }
 .nav-links a { text-decoration: none; color: var(--on-ink-dim); transition: color 0.15s ease; }
 .nav-links a:hover, .nav-links a[aria-current] { color: var(--on-ink); }
 .nav-links .pill { color: var(--on-ink); border: 1px solid rgba(255,255,255,0.22); padding: 7px 14px; border-radius: 999px; }
-@media (max-width: 640px) { .nav-links .hide-sm { display: none; } }
+@media (max-width: 940px) { .nav-links .hide-sm { display: none; } }
 @media (max-width: 430px) { .brand small { display: none; } .nav-links .pill { padding: 7px 12px; } }
 
 /* ---------- buttons ---------- */
@@ -571,3 +571,24 @@ picture { display: block; }
 @media (max-width: 640px) { .guide-cta .btn { width: 100%; justify-content: center; } }
 .diff.guide-grid { margin-top: 0; }
 .prose .guide-cta .btn-red { color: #fff; text-decoration: none; }
+
+/* Attorney drafts (privacy-2.1-DRAFT.html, terms-2.1-DRAFT.html): never published as-is */
+.draft-banner { background: #5a1208; color: #fff; border-bottom: 2px solid var(--red); padding: 14px 0; font: 500 15px/1.45 var(--body); }
+.draft-banner a { color: #fff; text-decoration: underline; }
+.prose .draft-q { border-left: 4px solid var(--red); padding: 6px 12px; background: rgba(255, 58, 30, 0.07); }
+
+/* What's new in 2.1 */
+.wn figure.wn-fig { margin: 18px 0 22px; }
+.wn figure.wn-fig img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.wn figure.wn-fig figcaption { font-size: 14px; color: var(--fg-dim); margin-top: 8px; }
+.wn ul { padding-left: 20px; } .wn li + li { margin-top: 6px; }
+.wn .small { font-size: 14px; }
+.wn .btn { margin-top: 12px; }
+
+/* Download (2.1): four ways to get the app */
+.download { position: relative; }
+.plans.dl-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.dl-grid .plan .btn { margin-top: auto; }
+.dl-grid .plan .name { flex-direction: column; align-items: flex-start; gap: 6px; }
+.dl-grid .plan .btn { justify-content: center; }
+.dl-grid .plan .btn { width: 100%; text-align: center; line-height: 1.2; }
