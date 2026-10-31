@@ -576,3 +576,11 @@ picture { display: block; }
 .draft-banner { background: #5a1208; color: #fff; border-bottom: 2px solid var(--red); padding: 14px 0; font: 500 15px/1.45 var(--body); }
 .draft-banner a { color: #fff; text-decoration: underline; }
 .prose .draft-q { border-left: 4px solid var(--red); padding: 6px 12px; background: rgba(255, 58, 30, 0.07); }
+
+/* What's new in 2.1 */
+.wn figure.wn-fig { margin: 18px 0 22px; }
+.wn figure.wn-fig img { width: 100%; height: auto; border-radius: 10px; border: 1px solid var(--line); }
+.wn figure.wn-fig figcaption { font-size: 14px; color: var(--fg-dim); margin-top: 8px; }
+.wn ul { padding-left: 20px; } .wn li + li { margin-top: 6px; }
+.wn .small { font-size: 14px; }
+.wn .btn { margin-top: 12px; }
