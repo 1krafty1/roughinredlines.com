@@ -584,3 +584,8 @@ picture { display: block; }
 .wn ul { padding-left: 20px; } .wn li + li { margin-top: 6px; }
 .wn .small { font-size: 14px; }
 .wn .btn { margin-top: 12px; }
+
+/* Download (2.1): four ways to get the app */
+.download { position: relative; }
+.plans.dl-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.dl-grid .plan .btn { margin-top: auto; }
