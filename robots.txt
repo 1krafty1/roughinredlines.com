@@ -3,4 +3,6 @@ Allow: /
 Disallow: /oauth/
 Disallow: /s/
 Disallow: /unsubscribe/
+Disallow: /privacy-2.1-DRAFT.html
+Disallow: /terms-2.1-DRAFT.html
 Sitemap: https://roughinredlines.com/sitemap.xml

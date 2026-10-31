@@ -571,3 +571,8 @@ picture { display: block; }
 @media (max-width: 640px) { .guide-cta .btn { width: 100%; justify-content: center; } }
 .diff.guide-grid { margin-top: 0; }
 .prose .guide-cta .btn-red { color: #fff; text-decoration: none; }
+
+/* Attorney drafts (privacy-2.1-DRAFT.html, terms-2.1-DRAFT.html): never published as-is */
+.draft-banner { background: #5a1208; color: #fff; border-bottom: 2px solid var(--red); padding: 14px 0; font: 500 15px/1.45 var(--body); }
+.draft-banner a { color: #fff; text-decoration: underline; }
+.prose .draft-q { border-left: 4px solid var(--red); padding: 6px 12px; background: rgba(255, 58, 30, 0.07); }
