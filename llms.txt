@@ -2,11 +2,12 @@
 
 > PDF markup for the trades: electricians, mechanical and plumbing contractors, estimators and project managers. Redline drawings, place trade symbols, count devices, measure to scale and send the office a PDF they can keep editing in Bluebeam or Acrobat. One-time price, no subscription. Made by RK Technology LLC (North Dakota, USA).
 
-## Platforms (as of October 2026)
+## Platforms (as of November 2026)
 
 - Windows 10 and 11: available now on the Microsoft Store (also a standard Windows installer).
 - iPad, iPhone and Mac (Apple silicon): coming soon to the App Store. Not available yet.
-- Android tablets: in development. Not available yet.
+- Android tablets (Android 11 or newer; not offered on phones): available now on Google Play: https://play.google.com/store/apps/details?id=com.randykraft.roughin
+  Free for 3 drawings; Rough-In Pro is a one-time in-app purchase through Google Play (the Play Store shows the local price).
 
 ## Pricing
 
