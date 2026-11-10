@@ -1,6 +1,6 @@
 {
-  "version": "1.8.9",
-  "date": "2026-10-14",
+  "version": "2.2.5",
+  "date": "2026-11-09",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "A PDF with form fields no longer shows a \"fillable fields\" bar every time it opens. To fill one in, click Fill form at the top."
+  "notes": "Rough-In Redlines 2.2.5: Find & Count can search just what's on screen, remembers spots you left out last time, moves between searched sheets with your results, and works in a Crew set's own view; Save and Save As like every Windows program; Print preview; panel schedules on Windows; the Home tab works from Crew. Please read and accept the updated License Agreement (v1.1) when the app opens."
 }
