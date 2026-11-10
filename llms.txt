@@ -5,7 +5,7 @@
 ## Platforms (as of November 2026)
 
 - Windows 10 and 11: available now on the Microsoft Store (also a standard Windows installer).
-- iPad, iPhone and Mac (Apple silicon): coming soon to the App Store. Not available yet.
+- iPad, iPhone and Mac (Apple silicon): available now on the App Store, https://apps.apple.com/app/id6828113217 (one download for all three; free for 3 drawings; Rough-In Pro is a one-time $39.99 in-app purchase, restored on your other Apple devices with the same Apple Account). Crew is not in the App Store version yet.
 - Android tablets (Android 11 or newer; not offered on phones): available now on Google Play: https://play.google.com/store/apps/details?id=com.randykraft.roughin
   Free for 3 drawings; Rough-In Pro is a one-time in-app purchase through Google Play (the Play Store shows the local price).
 
@@ -13,6 +13,7 @@
 
 - Free: every tool on up to 3 drawings. No account, no sign-up.
 - Rough-In Pro for Windows: $39.99 USD, one-time purchase, unlimited drawings, license key by email that works on 2 PCs. No subscription.
+- Rough-In Pro for iPad, iPhone and Mac: $39.99 USD, one-time in-app purchase through the App Store (the App Store shows the local price), unlimited drawings; the same purchase covers your iPad, iPhone and Apple silicon Mac with the same Apple Account. Bought separately from Pro for Windows. No subscription.
 - Crew (team version): coming soon, $15 per person per month. Not available yet.
 
 ## Features in the current Windows version
