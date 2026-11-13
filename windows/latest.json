@@ -1,6 +1,6 @@
 {
-  "version": "2.2.6",
-  "date": "2026-11-11",
+  "version": "2.2.7",
+  "date": "2026-11-13",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Rough-In Redlines 2.2.6: Combine / Convert turns a single Word, Excel or picture file into a PDF drawing (or joins several into one); File > Save As offers PDF with editable markups, Flattened PDF or a Rough-In drawing (.redline) right in the Windows Save dialog."
+  "notes": "Rough-In Redlines 2.2.7: folders like File Explorer, for your projects on Home and for drawings inside a project (New folder, drag and drop, Share a folder as a .zip), a discipline filter for drawings; in Crew, Download project saves the whole project as a .zip (a set as a .zip, a sheet or document as a PDF), a Share button in the project bar, By discipline buttons to pick sheets, Add forms or files, and a working menu on documents."
 }
