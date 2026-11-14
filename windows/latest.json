@@ -1,6 +1,6 @@
 {
-  "version": "2.2.7",
-  "date": "2026-11-13",
+  "version": "2.2.8",
+  "date": "2026-11-16",
   "url": "https://roughinredlines.com/#windows",
-  "notes": "Rough-In Redlines 2.2.7: folders like File Explorer, for your projects on Home and for drawings inside a project (New folder, drag and drop, Share a folder as a .zip), a discipline filter for drawings; in Crew, Download project saves the whole project as a .zip (a set as a .zip, a sheet or document as a PDF), a Share button in the project bar, By discipline buttons to pick sheets, Add forms or files, and a working menu on documents."
+  "notes": "Rough-In Redlines 2.2.8: fixes a line down the left side of printed pages on some office printers, adds a Print as image option, and in Crew lets you delete a document or a drawing set for everyone (Remove offline copy only frees this PC)."
 }
