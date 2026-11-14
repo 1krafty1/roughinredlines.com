@@ -1,6 +1,6 @@
 {
   "version": "2.2.8",
-  "date": "2026-11-16",
+  "date": "2026-11-14",
   "url": "https://roughinredlines.com/#windows",
   "notes": "Rough-In Redlines 2.2.8: fixes a line down the left side of printed pages on some office printers, adds a Print as image option, and in Crew lets you delete a document or a drawing set for everyone (Remove offline copy only frees this PC)."
 }
