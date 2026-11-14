@@ -5,7 +5,7 @@
 ## Platforms (as of November 2026)
 
 - Windows 10 and 11: available now on the Microsoft Store (also a standard Windows installer).
-- iPad, iPhone and Mac (Apple silicon): available now on the App Store, https://apps.apple.com/app/id6828113217 (one download for all three; free for 3 drawings; Rough-In Pro is a one-time $39.99 in-app purchase, restored on your other Apple devices with the same Apple Account). Crew is available in the App Store version as an in-app subscription.
+- iPad, iPhone and Mac (Apple silicon): available now on the App Store, https://apps.apple.com/app/id6828113217 (one download for all three; free for 3 drawings; Rough-In Pro is a one-time $39.99 in-app purchase, restored on your other Apple devices with the same Apple Account). Crew is available in the App Store version (iPhone, iPad and Mac) as an in-app subscription.
 - Android tablets (Android 11 or newer; not offered on phones): available now on Google Play: https://play.google.com/store/apps/details?id=com.randykraft.roughin
   Free for 3 drawings; Rough-In Pro is a one-time in-app purchase through Google Play (the Play Store shows the local price).
 
@@ -14,32 +14,27 @@
 - Free: every tool on up to 3 drawings. No account, no sign-up.
 - Rough-In Pro for Windows: $39.99 USD, one-time purchase, unlimited drawings, license key by email that works on 2 PCs. No subscription.
 - Rough-In Pro for iPad, iPhone and Mac: $39.99 USD, one-time in-app purchase through the App Store (the App Store shows the local price), unlimited drawings; the same purchase covers your iPad, iPhone and Apple silicon Mac with the same Apple Account. Bought separately from Pro for Windows. No subscription.
-- Crew (team version): available now (launched with version 2.1, November 14, 2026), $15 per person per month, includes Rough-In Pro. iPhone and iPad: "Crew Monthly" in-app subscription through the App Store, US $15.00 (CA$19.00 in Canada). Windows: a personal subscription or company licenses through Lemon Squeezy, $15 per person per month. A new company can try Crew free for 7 days with up to 4 people. Not in the Android version yet. Details: https://roughinredlines.com/crew.html
+- Crew (team version): available now (launched with version 2.1, November 14, 2026), $15 per person per month, includes Rough-In Pro. iPhone, iPad and Mac (Apple silicon): "Crew Monthly" in-app subscription through the App Store, US $15.00 (CA$19.00 in Canada). Windows: a personal subscription or company licenses through Lemon Squeezy, $15 per person per month. A new company can try Crew free for 7 days with up to 4 people. Not in the Android version yet. Details: https://roughinredlines.com/crew.html
 
-## Features in the current Windows version
+## Features in the current Windows version (2.2.7)
 
 - Clouds, pen, highlighter, text and callouts
 - Electrical and trade symbols (600+ in 18 libraries), stamps and signatures
 - Photos pinned on the drawing
 - Count and Find & Count (box one symbol, find the rest on every sheet); counts export to CSV
 - Measure in feet and inches, with the scale read from the title block
+- Area in square feet (trace a room, roof or lot), and lengths shown on lines and boxes while drawing
+- Snap to the drawing (line ends, corners, crossings), and symbols that snap into evenly spaced rows
+- Align and group markups
+- Search text across every sheet
+- Local projects (group drawings by job on the device)
 - Compare two drawing revisions
 - Redact (removes the content underneath)
 - Fill PDF forms
 - PDF export with markups that stay editable in Bluebeam Revu and Adobe Acrobat
-- Panel schedules (iPad; Windows in the next update)
+- Panel schedules (on Windows and on iPad, iPhone and Mac)
 - Pages view, combine files, print and plot (up to 36x48)
 - Works offline; files stay on your device; no account needed for Free or Pro
-
-## Coming in the next update (not available yet)
-
-- Snap to the drawing (line ends, corners, crossings)
-- Area in square feet
-- Lengths shown on lines and boxes while drawing
-- Align and group markups
-- Symbols snap into evenly spaced rows
-- Search text across sheets
-- Local projects
 
 ## What it is not
 
