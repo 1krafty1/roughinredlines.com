@@ -6,7 +6,7 @@ A silver R next to a red R whose stem is an up-arrow, whose bowl is a duplex
 receptacle symbol and whose leg is a down-arrow, in a glowing white-to-red ring
 on a dark disc with faint blueprint linework.
 
-Colours
+Colors
   Red (logo, glows, rules)     #FF3A1E   Red letter gradient  #FF5A38 -> #E8371C
   Red for buttons/fills        #D42F17   (white text on it passes WCAG AA)
   Red for text on charcoal     #FF6A4D
@@ -25,7 +25,7 @@ vector/ (SVG: sharp at any size; first choice for print shops, signs, decals, sh
   rr-mark-2026-letters-light.svg   Letters only for white backgrounds
   (The glow and smoke use SVG filters. Browsers and Inkscape render them; some
    print/vinyl software ignores filters. For vinyl/embroidery use the *-light or
-   *-letters files, which are flat colour.)
+   *-letters files, which are flat color.)
 
 png/ (exported from the vector at 512, 1024, 2048, 4096 px)
   rr-logo-2026-<size>.png                    Full logo, dark square: slides, documents, app stores' "logo" fields
