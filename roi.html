@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Redline Savings Calculator | Rough-In Redlines</title>
+<meta name="description" content="Estimate the hours and printing your crew could save marking up drawings on screen, and what Rough-In Redlines costs: Pro once, or Crew per person.">
+<meta name="theme-color" content="#08090C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/touch-icon.png">
+<link rel="canonical" href="https://roughinredlines.com/roi.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rough-In Redlines">
+<meta property="og:title" content="Rough-In Redlines savings calculator">
+<meta property="og:description" content="Estimate the hours and printing your crew could save marking up drawings on screen, and what Rough-In Redlines costs: Pro once, or Crew per person.">
+<meta property="og:url" content="https://roughinredlines.com/roi.html">
+<meta property="og:image" content="https://roughinredlines.com/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script type="module" src="/roi.js"></script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rough-In Redlines home"><img src="/img/logo.svg" width="46" height="46" alt=""><span><b>Rough-In</b> <small>REDLINES</small></span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="hide-sm" href="/#features">Features</a>
+      <a class="hide-sm" href="/#how">How it works</a>
+      <a class="hide-sm" href="/#pricing">Pricing</a>
+      <a class="hide-sm" href="/#windows">Windows</a>
+      <a class="nav-crew" href="/crew.html">Crew <span class="nav-soon">new</span></a>
+      <a class="hide-sm" href="/how-to.html">How-to</a>
+      <a href="/support.html">Support</a>
+      <a class="pill" href="/#pricing">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <p class="mono">Savings calculator</p>
+  <h1>What do paper redlines cost you?</h1>
+  <p>Put in your own numbers: how many people mark up drawings, how long it takes them and how much you print. You'll see the hours and dollars you could get back, and what Rough-In Redlines costs at the real prices.</p>
+</div></div>
+
+<section id="roi" class="calc-section" aria-labelledby="roi-title">
+  <div class="wrap">
+    <div class="calc">
+      <form class="calc-card calc-inputs" id="roi-calc" novalidate aria-labelledby="roi-title">
+        <div class="calc-top">
+          <h2 id="roi-title">Your numbers</h2>
+          <button class="calc-reset" type="button" id="roi-reset">Reset to examples</button>
+        </div>
+        <p class="calc-note">Every value below starts as an example assumption. Change any of them; the results update as you go.</p>
+        <p class="calc-shared" id="roi-shared" hidden>These numbers came from a shared link.</p>
+        <div class="calc-fields">
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-people">People doing markups</label><span class="calc-box"><input id="roi-people" type="number" inputmode="numeric" min="1" max="1000" step="1" data-k="people" aria-describedby="roi-people-hint"></span></div>
+            <input type="range" min="1" max="50" step="1" data-k="people" aria-label="People doing markups" aria-describedby="roi-people-hint">
+            <p class="calc-hint" id="roi-people-hint">Example: 5. Field and office: foremen, PMs, estimators, the CAD person.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-hours">Hours a week each on redlines, as-builts and takeoffs</label><span class="calc-box"><input id="roi-hours" type="number" inputmode="decimal" min="0" max="60" step="0.5" data-k="hours" aria-describedby="roi-hours-hint"><span class="calc-unit" aria-hidden="true">hr</span></span></div>
+            <input type="range" min="0" max="20" step="0.5" data-k="hours" aria-label="Hours a week each on redlines, as-builts and takeoffs" aria-describedby="roi-hours-hint">
+            <p class="calc-hint" id="roi-hours-hint">Example: 3 hours. Marking up prints, counting devices, measuring runs, redoing as-builts.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-rate">Loaded labor rate</label><span class="calc-box"><span class="calc-unit" aria-hidden="true">$</span><input id="roi-rate" type="number" inputmode="numeric" min="0" max="1000" step="1" data-k="rate" aria-describedby="roi-rate-hint"><span class="calc-unit" aria-hidden="true">/hr</span></span></div>
+            <input type="range" min="0" max="200" step="1" data-k="rate" aria-label="Loaded labor rate" aria-describedby="roi-rate-hint">
+            <p class="calc-hint" id="roi-rate-hint">Example: $75 an hour, wages plus taxes, insurance and benefits.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-savedPct">Share of that time saved</label><span class="calc-box"><input id="roi-savedPct" type="number" inputmode="numeric" min="0" max="100" step="1" data-k="savedPct" aria-describedby="roi-savedPct-hint"><span class="calc-unit" aria-hidden="true">%</span></span></div>
+            <input type="range" min="0" max="100" step="5" data-k="savedPct" aria-label="Share of that time saved" aria-describedby="roi-savedPct-hint">
+            <p class="calc-hint" id="roi-savedPct-hint">Example: 20%. Our assumption, kept conservative: change it to what you believe.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-sets">Drawing sets printed a month</label><span class="calc-box"><input id="roi-sets" type="number" inputmode="numeric" min="0" max="1000" step="1" data-k="sets" aria-describedby="roi-sets-hint"></span></div>
+            <input type="range" min="0" max="60" step="1" data-k="sets" aria-label="Drawing sets printed a month" aria-describedby="roi-sets-hint">
+            <p class="calc-hint" id="roi-sets-hint">Example: 10 sets, including reprints after a revision.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-setCost">Cost of one printed set</label><span class="calc-box"><span class="calc-unit" aria-hidden="true">$</span><input id="roi-setCost" type="number" inputmode="numeric" min="0" max="10000" step="1" data-k="setCost" aria-describedby="roi-setCost-hint"></span></div>
+            <input type="range" min="0" max="300" step="5" data-k="setCost" aria-label="Cost of one printed set" aria-describedby="roi-setCost-hint">
+            <p class="calc-hint" id="roi-setCost-hint">Example: $40. Paper, toner or the print shop, and the trip to get it.</p>
+          </div>
+          <div class="calc-field">
+            <div class="calc-row"><label for="roi-printCutPct">Share of printing you could stop</label><span class="calc-box"><input id="roi-printCutPct" type="number" inputmode="numeric" min="0" max="100" step="1" data-k="printCutPct" aria-describedby="roi-printCutPct-hint"><span class="calc-unit" aria-hidden="true">%</span></span></div>
+            <input type="range" min="0" max="100" step="5" data-k="printCutPct" aria-label="Share of printing you could stop" aria-describedby="roi-printCutPct-hint">
+            <p class="calc-hint" id="roi-printCutPct-hint">Example: 50%. Some sets still get printed for the trailer or the inspector.</p>
+          </div>
+          <fieldset class="calc-choice">
+            <legend>How you'd buy it</legend>
+            <label><input type="radio" name="plan" value="crew"> Crew for the team <small>($15 per person a month, Pro included)</small></label>
+            <label><input type="radio" name="plan" value="pro"> Rough-In Pro <small>($39.99 once per person)</small></label>
+          </fieldset>
+        </div>
+      </form>
+
+      <div class="calc-peek" id="roi-peek" aria-hidden="true"><span>Est. net savings</span><b id="peek-net">$0</b><a href="#roi-results" tabindex="-1">See results</a></div>
+
+      <section class="calc-card calc-results" id="roi-results" aria-labelledby="roi-results-title">
+        <p class="mono calc-kicker" id="roi-results-title">Estimated net savings</p>
+        <p class="calc-big" aria-live="polite"><b id="out-net">$0</b><span id="out-net-note">a year, after paying for Crew</span></p>
+        <dl class="calc-list">
+          <div class="calc-group">Saved a year</div>
+          <div><dt>Time back <small id="out-hours-today"></small></dt><dd id="out-hours-saved">0 hours</dd></div>
+          <div><dt>That time, in dollars</dt><dd id="out-labor">$0</dd></div>
+          <div><dt>Printing <small id="out-print-today"></small></dt><dd id="out-print">$0</dd></div>
+          <div class="calc-sum"><dt>Estimated savings</dt><dd id="out-savings">$0</dd></div>
+          <div class="calc-group">Rough-In Redlines</div>
+          <div><dt>Cost <small id="out-plan"></small></dt><dd id="out-cost">$0</dd></div>
+          <div class="calc-sum"><dt>Pays for itself in</dt><dd id="out-payback">—</dd></div>
+          <div><dt>Savings for each $1 you pay</dt><dd id="out-roi">—</dd></div>
+          <div><dt>After the first year</dt><dd id="out-later">$0</dd></div>
+        </dl>
+        <div class="calc-cta">
+          <a class="btn btn-red" href="/#pricing">Get Rough-In Redlines</a>
+          <a class="btn btn-line" href="/crew.html#crew-pricing">Crew pricing</a>
+        </div>
+        <p class="calc-fine">Estimates only — your numbers will differ. The defaults are example assumptions, not industry figures. Prices in US dollars before tax; Crew on the App Store in Canada is CA$19.00 a month.</p>
+      </section>
+    </div>
+
+    <div class="calc-keep">
+      <div class="calc-card calc-share">
+        <h2>Send it to your boss</h2>
+        <p>Copy a link that opens this calculator with your numbers filled in. Nothing is saved on our side.</p>
+        <button class="btn btn-line" type="button" id="share-copy">Copy link</button>
+        <label class="sr-only" for="share-url">Link to these numbers</label>
+        <input class="calc-url" id="share-url" type="text" readonly hidden>
+        <p class="calc-msg" id="share-msg" role="status"></p>
+      </div>
+      <form class="calc-card calc-email" id="roi-email" novalidate data-endpoint="https://mvxdyiaidounyzabydkt.supabase.co/functions/v1/roi-report">
+        <h2>Email me this report</h2>
+        <div class="calc-form-grid">
+          <div><label for="em-name">Name <small>(optional)</small></label><input id="em-name" name="name" autocomplete="name" maxlength="80"></div>
+          <div><label for="em-company">Company <small>(optional)</small></label><input id="em-company" name="company" autocomplete="organization" maxlength="120"></div>
+          <div class="full"><label for="em-email">Email</label><input id="em-email" name="email" type="email" autocomplete="email" required maxlength="254"></div>
+          <div class="hp" aria-hidden="true"><label for="em-website">Website</label><input id="em-website" name="website" tabindex="-1" autocomplete="off"></div>
+        </div>
+        <p class="calc-consent">We'll email this report and a few tips. Unsubscribe any time. See our <a href="/privacy.html">privacy policy</a>.</p>
+        <button class="btn btn-red" type="submit">Email me the report</button>
+        <p class="calc-msg" role="status"></p>
+      </form>
+    </div>
+
+    <div class="calc-how">
+      <h2>How the estimate works</h2>
+      <ul>
+        <li><strong>Time back</strong> = people × hours a week × 50 working weeks × the share of time saved. In dollars, × the labor rate.</li>
+        <li><strong>Printing</strong> = sets a month × cost per set × 12 × the share of printing you'd stop.</li>
+        <li><strong>The share of time saved</strong> is an assumption, not a promise: set it to what you believe.</li>
+        <li><strong>Crew</strong> costs $15 per person a month, every year, and includes Rough-In Pro. <strong>Rough-In Pro</strong> is $39.99 once per person (a Windows key works on 2 PCs; Pro on the iPad or Mac and on Windows are bought separately), then nothing.</li>
+        <li><strong>Pays for itself in</strong> = the cost ÷ the savings per day. <strong>Savings for each $1</strong> = savings ÷ cost.</li>
+      </ul>
+      <p>We haven't used any industry statistics here: the examples are round numbers to start from. Free covers 3 drawings, so you can time a real markup before you buy anything.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 RK Technology LLC · North Dakota</span>
+    <nav aria-label="Footer"><a href="/how-to.html">How-to</a><a href="/guides.html">Guides</a><a href="/compare.html">Compare</a><a href="/bluebeam-alternative.html">Bluebeam alternative</a><a href="/faq.html">FAQ</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a><a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a></nav>
+    <p class="sister-line">Also from us: <a href="https://toolsandequip.com/">Tools &amp; Equip — tool tracking for contractors</a></p>
+  </div>
+</footer>
+<!-- Cloudflare Web Analytics: anonymous visit counts, no cookies (see privacy.html "This website") -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a3a2b34bfd3e4677bcd4d33054e1f1a8"}'></script>
+</body>
+</html>

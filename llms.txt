@@ -59,6 +59,7 @@
 - FAQ: https://roughinredlines.com/faq.html
 - Guides: https://roughinredlines.com/guides.html
 - Crew (team version, available now): https://roughinredlines.com/crew.html
+- Savings calculator (estimate hours and printing saved, Pro vs Crew cost): https://roughinredlines.com/roi.html
 - How-to videos: https://roughinredlines.com/how-to.html
 - Support: https://roughinredlines.com/support.html
 - Privacy: https://roughinredlines.com/privacy.html

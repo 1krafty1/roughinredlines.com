@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unsubscribe — Rough-In Redlines</title>
+<meta name="description" content="Unsubscribe from savings-calculator tips.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#08090C">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/img/touch-icon.png">
+<link rel="canonical" href="https://roughinredlines.com/roi-unsubscribe.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,600..800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<script>
+// The unsubscribe link in a savings-calculator report email (roi.html). Nothing happens until the button is pressed,
+// so a mail filter that opens links can't unsubscribe anyone. Endpoint: the roi-report function (Tools & Equip project).
+document.addEventListener("DOMContentLoaded", function () {
+  var ENDPOINT = "https://mvxdyiaidounyzabydkt.supabase.co/functions/v1/roi-report/unsubscribe";
+  var t = new URLSearchParams(location.search).get("t") || "";
+  var btn = document.getElementById("unsub"), msg = document.getElementById("unsub-msg");
+  var fail = "That didn't work. Reply to the email and we'll unsubscribe you.";
+  if (!/^[0-9a-f-]{36}$/i.test(t)) { btn.hidden = true; msg.textContent = "This link is not complete. Reply to the email and we will unsubscribe you."; }
+  btn.addEventListener("click", function () {
+    btn.disabled = true; msg.textContent = "One moment\u2026";
+    fetch(ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ t: t }) })
+      .then(function (r) { return r.json().catch(function () { return null; }).then(function (j) { return { r: r, j: j }; }); })
+      .then(function (x) {
+        if (x.r.ok && x.j && x.j.ok) { btn.hidden = true; msg.textContent = "You're unsubscribed. We won't send you any more tips."; return; }
+        msg.textContent = (x.j && x.j.error) || fail; btn.disabled = false;
+      })
+      .catch(function () { msg.textContent = fail; btn.disabled = false; });
+  });
+});
+</script>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Rough-In Redlines home"><img src="/img/logo.svg" width="46" height="46" alt=""><span><b>Rough-In</b> <small>REDLINES</small></span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="hide-sm" href="/#features">Features</a>
+      <a class="hide-sm" href="/#how">How it works</a>
+      <a class="hide-sm" href="/#pricing">Pricing</a>
+      <a class="hide-sm" href="/#windows">Windows</a>
+      <a class="nav-crew" href="/crew.html">Crew <span class="nav-soon">new</span></a>
+      <a class="hide-sm" href="/how-to.html">How-to</a>
+      <a href="/support.html">Support</a>
+      <a class="pill" href="/#pricing">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="page-head"><div class="wrap">
+  <p class="mono">Savings calculator</p>
+  <h1>Unsubscribe from tips</h1>
+  <p>You asked for a savings report from the Rough-In Redlines calculator. Press the button and we won't send you any more tips at that address.</p>
+  <p class="calc-cta"><button class="btn btn-red" type="button" id="unsub">Unsubscribe</button></p>
+  <p class="calc-msg" id="unsub-msg" role="status"></p>
+</div></div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 RK Technology LLC · North Dakota</span>
+    <nav aria-label="Footer"><a href="/how-to.html">How-to</a><a href="/guides.html">Guides</a><a href="/compare.html">Compare</a><a href="/bluebeam-alternative.html">Bluebeam alternative</a><a href="/faq.html">FAQ</a><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/support.html">Support</a><a href="mailto:support@roughinredlines.com">support@roughinredlines.com</a></nav>
+    <p class="sister-line">Also from us: <a href="https://toolsandequip.com/">Tools &amp; Equip — tool tracking for contractors</a></p>
+  </div>
+</footer>
+</body>
+</html>
