@@ -198,6 +198,9 @@ footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-cont
 footer nav { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 footer a { color: var(--on-ink-dim); text-decoration: none; transition: color 0.15s ease; }
 footer a:hover { color: var(--on-ink); }
+footer .sister-line { flex-basis: 100%; font-size: 13.5px; color: var(--on-ink-dim); }
+footer .sister-line a { color: var(--on-ink); text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.3); text-underline-offset: 3px; }
+footer .sister-line a:hover { text-decoration-color: currentColor; }
 
 /* long-form pages */
 .page-head { background: var(--ink); color: var(--on-ink); border-bottom: 1px solid var(--ink-line); position: relative; overflow: hidden; }
@@ -571,3 +574,12 @@ picture { display: block; }
 @media (max-width: 640px) { .guide-cta .btn { width: 100%; justify-content: center; } }
 .diff.guide-grid { margin-top: 0; }
 .prose .guide-cta .btn-red { color: #fff; text-decoration: none; }
+
+/* sister product (Tools & Equip): one quiet card on the home page */
+.sister { padding-block: 0 clamp(64px, 9vw, 120px); }
+.sister-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px 36px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: 22px; padding: clamp(22px, 3vw, 34px); }
+.sister-card .mono { color: var(--fg-dim); }
+.sister-card h2 { font-size: clamp(28px, 3.4vw, 42px); margin-top: 10px; }
+.sister-card p:not(.mono) { color: var(--fg-dim); margin-top: 10px; max-width: 46em; }
+.sister-card p strong { color: var(--fg); font-weight: 600; }
+@media (max-width: 640px) { .sister-card { grid-template-columns: minmax(0, 1fr); } .sister-card .btn { width: 100%; justify-content: center; } }
